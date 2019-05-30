@@ -1,6 +1,7 @@
 class CreateMapObjects < ActiveRecord::Migration[5.2]
   def change
     create_table :map_objects do |t|
+        t.actable 
       t.string, :name
       t.float, :latitude
       t.float, :longitude
