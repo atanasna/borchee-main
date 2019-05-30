@@ -1,0 +1,2 @@
+class Hut < MapObject
+end

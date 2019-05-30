@@ -1,0 +1,2 @@
+class Waterfall < MapObject
+end
