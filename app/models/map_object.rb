@@ -1,9 +1,5 @@
-class MapObject < ApplicationRecord
-    attribute :name, :latitude, :longitude, :description
-    
-    validates_presence_of :name, :latitude, :longitude
-
-    def info
-        "#{name},#{latitude},#{longitude},#{description}"
+class MapObject
+    def self.all
+        return Hut.all + Waterfall.all + Cave.all
     end
 end
