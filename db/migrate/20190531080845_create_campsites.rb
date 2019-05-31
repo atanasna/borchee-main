@@ -1,6 +1,6 @@
-class CreateMapObjects < ActiveRecord::Migration[5.2]
+class CreateCampsites < ActiveRecord::Migration[5.2]
     def change
-        create_table :map_objects do |t|
+        create_table :campsites do |t|
             t.string :name
             t.float :latitude
             t.float :longitude

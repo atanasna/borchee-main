@@ -1,3 +1,9 @@
 class Waterfall < MapObject
-    act_as :mapObject
+    attribute :height
+    
+    validates_presence_of :height
+
+    def info
+        "#{name},#{latitude},#{longitude},#{description},#{height}"
+    end
 end

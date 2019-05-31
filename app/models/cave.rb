@@ -1,3 +1,7 @@
 class Cave < MapObject
-    act_as :mapObject
+    attribute :depth, :lenght
+    
+    def info
+        "#{name},#{latitude},#{longitude},#{description},#{depth},#{lenght}"
+    end
 end

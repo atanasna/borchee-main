@@ -1,5 +1,6 @@
 class MapObject < ApplicationRecord
-    actable
+    attribute :name, :latitude, :longitude, :description
+    
     validates_presence_of :name, :latitude, :longitude
 
     def info

@@ -1,3 +1,9 @@
 class Hut < MapObject
-    act_as :mapObject
+    attribute :altitude
+
+    validates_presence_of :altitude
+
+    def info
+        "#{name},#{latitude},#{longitude},#{description},#{altitude}"
+    end
 end

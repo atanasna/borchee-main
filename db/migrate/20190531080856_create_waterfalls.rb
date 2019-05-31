@@ -1,10 +1,11 @@
-class CreateMapObjects < ActiveRecord::Migration[5.2]
+class CreateWaterfalls < ActiveRecord::Migration[5.2]
     def change
-        create_table :map_objects do |t|
+        create_table :waterfalls do |t|
             t.string :name
             t.float :latitude
             t.float :longitude
             t.text :description
+            t.integer :height
 
             t.timestamps
         end
