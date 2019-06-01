@@ -10,6 +10,8 @@
 Hut.create :name => "Raj", :latitude => 42.696373, :longitude => 24.931110, :altitude => 1430
 Hut.create :name => "Mazalat", :latitude => 42.75857, :longitude => 25.11479, :altitude => 1620
 Hut.create :name => "Vihren", :latitude => 41.75670 , :longitude => 23.41638, :altitude => 1950
+Hut.create :name => "Triglav", :latitude => 42.711039 , :longitude => 25.037053, :altitude => 1950
+Hut.create :name => "Tazha", :latitude => 42.751202 , :longitude => 24.993881, :altitude => 1950
 
 Waterfall.create :name => "Skakavitsa", :latitude => 42.221667, :longitude => 23.304722, :height => 70
 Waterfall.create :name => "Raysko Praskalo", :latitude => 42.711936, :longitude => 24.924439, :height => 125
@@ -27,3 +29,16 @@ Review.create :score => 9, :comment => "Super magichnoto mqsto", :reviewable => 
 Review.create :score => 1, :comment => "Mirisheshe na LAINA", :reviewable => Hut.all.last
 Review.create :score => 10, :comment => "Ne moga poweche, tolkowa qka beshe", :reviewable => Hut.all.last
 Review.create :score => 1, :comment => "ZLE ZLE ZLE", :reviewable => Hut.all.last
+
+Path.create(
+    :latitudes=>[42.696,42.706,42.729,42.745,42.751], 
+    :longitudes=>[24.931,24.959,24.954,24.966,24.993], 
+    :time=>50, :lenght=>1.2, :color => "orange")
+Path.create(
+    :latitudes=>[42.696,42.693,42.704,42.712,42.709,42.713,42.711], 
+    :longitudes=>[24.931,24.941,25.003,25.019,25.022,25.026,25.037], 
+    :time=>110, :lenght=>3, :color => "green")
+Path.create(
+    :latitudes=>[42.751,42.735,42.711], 
+    :longitudes=>[24.993,24.994,25.037], 
+    :time=>160, :lenght=>4.5, :color => "blue")

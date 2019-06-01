@@ -26,5 +26,11 @@ Rails.application.routes.draw do
     get 'waterfalls/new', to: 'waterfalls#new'
     post 'waterfalls', to: 'waterfalls#create'
     get 'waterfalls/:id', to: 'waterfalls#show'
+
+    #Paths
+    get 'paths', to: 'paths#index'
+    get 'paths/new', to: 'paths#new'
+    post 'paths', to: 'paths#create'
+    get 'paths/:id', to: 'paths#show'
 end
 

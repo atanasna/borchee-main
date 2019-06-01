@@ -1,12 +1,10 @@
 class CampsitesController < ApplicationController
     def index
-        camps = Campsite.all
-        render json: camps
+        render json: Campsite.all
     end
 
     def show
-        id = params[:id]
-        camp = Campsite.find(id)
+        camp = Campsite.find(params[:id])
         render json: { 
             :general => camp,
             :reviews => camp.reviews, 

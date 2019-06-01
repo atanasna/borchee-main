@@ -1,12 +1,10 @@
 class CavesController < ApplicationController
     def index
-        caves = Cave.all
-        render json: caves
+        render json: Cave.all
     end
 
     def show
-        id = params[:id]
-        cave = Cave.find(id)
+        cave = Cave.find(params[:id])
         render json: { 
             :general => cave, 
             :reviews => cave.reviews, 

@@ -1,12 +1,10 @@
 class HutsController < ApplicationController
     def index
-        huts = Hut.all
-        render json: huts
+        render json: Hut.all
     end
 
     def show
-        id = params[:id]
-        hut = Hut.find(id)
+        hut = Hut.find(params[:id])
         render json: { 
             :general => hut, 
             :score => hut.score,
