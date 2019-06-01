@@ -13,4 +13,27 @@ class HutsController < ApplicationController
             :reviews => hut.reviews, 
             :images => nil}
     end
+
+    def create
+        hut = Hut.create(
+            :name => params[:name], 
+            :latitude => params[:latitude], 
+            :longitude => params[:longitude], 
+            :altitude => params[:altitude],
+            :description => params[:description])
+
+        if hut.save
+            render json: hut
+        else
+            render json: "failure"
+        end
+    end
+
+    def destroy
+        if Hut.find(params[:id]).delete
+            render json: "success"
+        else
+            render json: "failure"
+        end
+    end
 end

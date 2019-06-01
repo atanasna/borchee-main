@@ -6,9 +6,9 @@ class CreateHuts < ActiveRecord::Migration[5.2]
             t.string :name
             t.float :latitude
             t.float :longitude
-            t.text :description
             t.integer :altitude
-
+            t.text :description
+            
             t.timestamps
         end
     end

@@ -12,4 +12,27 @@ class WaterfallsController < ApplicationController
             :reviews => wf.reviews, 
             :images => nil}
     end
+
+    def create
+        wf = Waterfall.create(
+            :name => params[:name], 
+            :latitude => params[:latitude], 
+            :longitude => params[:longitude], 
+            :height => params[:height],
+            :description => params[:description])
+
+        if wf.save
+            render json: wf
+        else
+            render json: "failure"
+        end
+    end
+
+    def destroy
+        if Waterfall.find(params[:id]).delete
+            render json: "success"
+        else
+            render json: "failure"
+        end
+    end
 end
