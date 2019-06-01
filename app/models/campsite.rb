@@ -7,6 +7,7 @@ class Campsite < ApplicationRecord
 
     #Validators
     validates_presence_of :name,:latitude,:longitude
+    validates_uniqueness_of :latitude,:longitude
 
     #Relationships
     has_many :review, as: :reviewable

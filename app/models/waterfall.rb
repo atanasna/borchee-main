@@ -7,7 +7,8 @@ class Waterfall < ApplicationRecord
     attribute :height, :integer
     
     #Validators
-    validates_presence_of :name,:latitude,:longitude,:height
+    validates_presence_of :name, :latitude, :longitude, :height
+    validates_uniqueness_of :latitude, :longitude
 
     #Relationships
     has_many :review, as: :reviewable

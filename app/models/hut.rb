@@ -8,6 +8,7 @@ class Hut < ApplicationRecord
 
     #Validators
     validates_presence_of :name,:latitude,:longitude,:altitude
+    validates_uniqueness_of :latitude, :longitude
     validates :latitude, :numericality => {:greater_than => -90, :less_than => 90}
     validates :longitude, :numericality => {:greater_than => -180, :less_than => 180}
     

@@ -28,6 +28,22 @@ class PathsController < ApplicationController
         end
     end
 
+    def update
+        path = Path.find params[:id]
+        if not params[:name].nil? then path.name = params[:name] end
+        if not params[:lenght].nil? then path.lenght = params[:lenght] end
+        if not params[:time].nil? then path.time = params[:time] end
+        if not params[:latitudes].nil? then path.latitudes = params[:latitudes] end
+        if not params[:longitudes].nil? then path.longitudes = params[:longitudes] end
+        if not params[:description].nil? then path.description = params[:description] end
+
+        if wf.save
+            render json: wf
+        else
+            render json: "failure"
+        end
+    end
+
     def destroy
         if Path.find(params[:id]).delete
             render json: "success"
