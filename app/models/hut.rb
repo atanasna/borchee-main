@@ -1,10 +1,12 @@
 class Hut < ApplicationRecord
     #Attributes
     attribute :name, :string
+    attribute :altitude, :integer
+    attribute :capacity, :integer
     attribute :latitude, :float
     attribute :longitude, :float
     attribute :description, :text
-    attribute :altitude, :integer
+    
 
     #Validators
     validates_presence_of :name,:latitude,:longitude,:altitude
@@ -20,6 +22,6 @@ class Hut < ApplicationRecord
     
     #Methods
     def info
-        "#{name},#{latitude},#{longitude},#{description},#{altitude}"
+        "#{name},#{latitude},#{longitude},#{description},#{altitude},#{capacity}"
     end
 end
