@@ -99,7 +99,6 @@ Hut.create :name => "Verila", :latitude => 42.288584, :longitude => 23.262471, :
 Hut.create :name => "Venetica", :latitude => 42.254438, :longitude => 23.739562, :altitude => 1400, :capacity => 60
 Hut.create :name => "Yastrebec", :latitude => 42.225672, :longitude => 23.58065, :altitude => 25, :capacity => nil
 Hut.create :name => "Zavrachica", :latitude => 42.168, :longitude => 23.64, :altitude => 2178, :capacity => 75
-Hut.create :name => "Rai", :latitude => 42.696373, :longitude => 24.93111, :altitude => 1430, :capacity => 120
 Hut.create :name => "Belogradchik", :latitude => 43.625922, :longitude => 22.686773, :altitude => 576, :capacity => 67
 Hut.create :name => "BalkanskiRozi", :latitude => 42.69913, :longitude => 24.8273, :altitude => 1156, :capacity => 30
 Hut.create :name => "BachoKiro", :latitude => 42.947119, :longitude => 25.429796, :altitude => 293, :capacity => 85
@@ -115,6 +114,7 @@ Hut.create :name => "Dermenka", :latitude => 42.7302, :longitude => 24.68089, :a
 Hut.create :name => "Dobrila", :latitude => 42.71109, :longitude => 24.76102, :altitude => 1804, :capacity => 80
 Hut.create :name => "Gaburski", :latitude => 42.883492, :longitude => 24.716546, :altitude => 420, :capacity => 65
 Hut.create :name => "GorskaHija", :latitude => 42.68829, :longitude => 27.55074, :altitude => 200, :capacity => 26
+Hut.create :name => "Rai", :latitude => 42.696373, :longitude => 24.93111, :altitude => 1430, :capacity => 120
 Hut.create :name => "GorskiRai", :latitude => 43.4544, :longitude => 22.641, :altitude => 1450, :capacity => 38
 Hut.create :name => "Gramadliva", :latitude => 42.79261, :longitude => 25.658416, :altitude => 876, :capacity => 40
 Hut.create :name => "GramadlivaSki", :latitude => 42.79393, :longitude => 25.65488, :altitude => 860, :capacity => 15
@@ -153,7 +153,6 @@ Hut.create :name => "Pleven", :latitude => 42.7496, :longitude => 24.89571, :alt
 Hut.create :name => "Rudinata", :latitude => 42.844403, :longitude => 23.84839, :altitude => 1360, :capacity => 60
 Hut.create :name => "Ravnec", :latitude => 42.664, :longitude => 24.8289, :altitude => 1250, :capacity => 30
 Hut.create :name => "Rusalka", :latitude => 42.6898, :longitude => 25.056, :altitude => 1110, :capacity => 40
-Hut.create :name => "Rai", :latitude => 42.696373, :longitude => 24.93111, :altitude => 1430, :capacity => 120
 Hut.create :name => "Staroplaninec", :latitude => 42.82765, :longitude => 23.999987, :altitude => 580, :capacity => 50
 Hut.create :name => "Strajata", :latitude => 42.7816, :longitude => 24.077733, :altitude => 1350, :capacity => 29
 Hut.create :name => "Sokolna", :latitude => 42.68978, :longitude => 25.14569, :altitude => 1350, :capacity => 40
@@ -191,85 +190,84 @@ Hut.create :name => "Undola", :latitude => 42.056486, :longitude => 23.855953, :
 Hut.create :name => "Zdravec", :latitude => 42.00463, :longitude => 24.69382, :altitude => 1185, :capacity => 109
 Hut.create :name => "KoziaStena", :latitude => 42.785253, :longitude => 24.529283, :altitude => 1562, :capacity => 100
 Hut.create :name => "Zagaza", :latitude => 41.767807, :longitude => 23.324059, :altitude => 1400, :capacity => 50
-Hut.create :name => "KoziaStena", :latitude => 42.785265, :longitude => 24.529367, :altitude => , :capacity =>
-Hut.create :name => "Zdravec", :latitude => 42.004409, :longitude => 24.693256, :altitude => , :capacity =>
+Hut.create :name => "KoziaStena", :latitude => 42.785265, :longitude => 24.529367, :altitude => nil, :capacity => nil
+Hut.create :name => "Zdravec", :latitude => 42.004409, :longitude => 24.693256, :altitude => nil, :capacity => nil
+Hut.create :name => "Partizanska Pesen", :latitude => 42.784264, :longitude => 25.197934, :altitude => nil, :capacity => nil
+Hut.create :name => "Mandrata", :latitude => 42.75034, :longitude => 25.00495, :altitude => nil, :capacity => 22
 
 # NO COORDINATES
-, 
-Hut.create :name => "GoliamataMochara", :latitude => , :longitude => , :altitude => 1450, :capacity => 160
-Hut.create :name => "HadjiRuskovi", :latitude => , :longitude => , :altitude => 936, :capacity => 105
-Hut.create :name => "Melnik", :latitude => , :longitude => , :altitude => 404, :capacity => 40
-Hut.create :name => "Perun", :latitude => , :longitude => , :altitude => 825, :capacity => 73
-Hut.create :name => "Rojen", :latitude => , :longitude => , :altitude => 510, :capacity => 50
-Hut.create :name => "Asenovgrad", :latitude => , :longitude => , :altitude => 200, :capacity => 40
-Hut.create :name => "Bachkovo", :latitude => , :longitude => , :altitude => 377, :capacity => 54
-Hut.create :name => "AtanasSpiridonov", :latitude => , :longitude => , :altitude => 680, :capacity => 50
-Hut.create :name => "Cheresha", :latitude => , :longitude => , :altitude => 1100, :capacity => 33
-Hut.create :name => "Churen", :latitude => , :longitude => , :altitude => 1450, :capacity => 43
-Hut.create :name => "HaidushkiPoliani", :latitude => , :longitude => , :altitude => , :capacity => 19
-Hut.create :name => "Makaza", :latitude => , :longitude => , :altitude => , :capacity => 18
-Hut.create :name => "Manastir", :latitude => , :longitude => , :altitude => 1450, :capacity => 32
-Hut.create :name => "Momchil", :latitude => , :longitude => , :altitude => 340, :capacity => 60
-Hut.create :name => "MominaSulza", :latitude => , :longitude => , :altitude => 62, :capacity => 40
-Hut.create :name => "Peshterniak", :latitude => , :longitude => , :altitude => 1140, :capacity => 90
-Hut.create :name => "Shadeetsa", :latitude => , :longitude => , :altitude => 1150, :capacity => 60
-Hut.create :name => "Slaveino", :latitude => , :longitude => , :altitude => 1050, :capacity => 34
-Hut.create :name => "Snejanka", :latitude => , :longitude => , :altitude => 518, :capacity => 40
-Hut.create :name => "Solishta", :latitude => , :longitude => , :altitude => 1150, :capacity => 30
-Hut.create :name => "Svejest", :latitude => , :longitude => , :altitude => 450, :capacity => 45
-Hut.create :name => "Teheran", :latitude => , :longitude => , :altitude => 1710, :capacity => 73
-Hut.create :name => "Teshel", :latitude => , :longitude => , :altitude => 850, :capacity => 82
-Hut.create :name => "Tunkovo", :latitude => , :longitude => , :altitude => 550, :capacity => 34
-Hut.create :name => "Velingrad", :latitude => , :longitude => , :altitude => 812, :capacity => 116
-Hut.create :name => "Zagrad", :latitude => , :longitude => , :altitude => 1250, :capacity => 42
-Hut.create :name => "Eleshnica", :latitude => , :longitude => , :altitude => 865, :capacity => 72
-Hut.create :name => "HotelMaliovica", :latitude => , :longitude => , :altitude => 1720, :capacity => 180
-Hut.create :name => "Iafora", :latitude => , :longitude => , :altitude => 1465, :capacity => 120
-Hut.create :name => "LedenoEzero", :latitude => , :longitude => , :altitude => 2710, :capacity => 6
-Hut.create :name => "BialaReka", :latitude => , :longitude => , :altitude => , :capacity =>
-Hut.create :name => "BialaReka", :latitude => , :longitude => , :altitude => 0, :capacity => 0
-Hut.create :name => "Rai", :latitude => , :longitude => , :altitude => , :capacity =>
-Hut.create :name => "Armeec", :latitude => , :longitude => , :altitude => 1080, :capacity => 25
-Hut.create :name => "Akademik", :latitude => , :longitude => , :altitude => 1390, :capacity => 12
-Hut.create :name => "BashSamokov", :latitude => , :longitude => , :altitude => 750, :capacity => 40
-Hut.create :name => "BialaReka", :latitude => , :longitude => , :altitude => 0, :capacity => 0
-Hut.create :name => "Butora", :latitude => , :longitude => , :altitude => 800, :capacity => 33
-Hut.create :name => "ChudniteSkali", :latitude => , :longitude => , :altitude => 85, :capacity => 79
-Hut.create :name => "DomKarandila", :latitude => , :longitude => , :altitude => 950, :capacity => 180
-Hut.create :name => "Himik", :latitude => , :longitude => , :altitude => 850, :capacity => 50
-Hut.create :name => "YavorovaLaka", :latitude => , :longitude => , :altitude => 740, :capacity => 60
-Hut.create :name => "Iantra", :latitude => , :longitude => , :altitude => 1210, :capacity => 22
-Hut.create :name => "IazovirKamchia", :latitude => , :longitude => , :altitude => 200, :capacity => 47
-Hut.create :name => "Ignatica", :latitude => , :longitude => , :altitude => 344, :capacity => 16
-Hut.create :name => "Ivailo", :latitude => , :longitude => , :altitude => 1050, :capacity => 85
-Hut.create :name => "KaraivanovoHorishte", :latitude => , :longitude => , :altitude => 1100, :capacity => 20
-Hut.create :name => "Karandila", :latitude => , :longitude => , :altitude => 950, :capacity => 24
-Hut.create :name => "Klisura", :latitude => , :longitude => , :altitude => 560, :capacity => 65
-Hut.create :name => "KomStara", :latitude => , :longitude => , :altitude => 1620, :capacity => 22
-Hut.create :name => "KumpingChumerna", :latitude => , :longitude => , :altitude => 1450, :capacity => 40
-Hut.create :name => "Luliak", :latitude => , :longitude => , :altitude => 303, :capacity => 50
-Hut.create :name => "Mandrata", :latitude => , :longitude => , :altitude => , :capacity => 22
-Hut.create :name => "MominaPoliana", :latitude => , :longitude => , :altitude => 1640, :capacity => 80
-Hut.create :name => "PetrohanskiProhod", :latitude => , :longitude => , :altitude => 1444, :capacity => 20
-Hut.create :name => "Pirdop", :latitude => , :longitude => , :altitude => 686, :capacity => 100
-Hut.create :name => "Plachkovci", :latitude => , :longitude => , :altitude => 510, :capacity => 60
-Hut.create :name => "Planinec", :latitude => , :longitude => , :altitude => 1080, :capacity => 25
-Hut.create :name => "Planinica", :latitude => , :longitude => , :altitude => 752, :capacity => 20
-Hut.create :name => "PlaninskiIzvori", :latitude => , :longitude => , :altitude => 1850, :capacity => 50
-Hut.create :name => "Pogledec", :latitude => , :longitude => , :altitude => 666, :capacity => 60
-Hut.create :name => "SpalniaUzana", :latitude => , :longitude => , :altitude => 1240, :capacity => 36
-Hut.create :name => "Strinava", :latitude => , :longitude => , :altitude => 272, :capacity => 40
-Hut.create :name => "VelinDial", :latitude => , :longitude => , :altitude => 890, :capacity => 25
-Hut.create :name => "Vidima", :latitude => , :longitude => , :altitude => 600, :capacity => 54
-Hut.create :name => "VurbishkiProhod", :latitude => , :longitude => , :altitude => 470, :capacity => 76
-Hut.create :name => "Zdravec", :latitude => , :longitude => , :altitude => 430, :capacity => 40
-Hut.create :name => "ZaslonGoliamKademlia", :latitude => , :longitude => , :altitude => 2276, :capacity => 10
-Hut.create :name => "Chivira", :latitude => , :longitude => , :altitude => 1370, :capacity => 80
-Hut.create :name => "Haiduta", :latitude => , :longitude => , :altitude => 1100, :capacity => 10
-Hut.create :name => "Srednogorec", :latitude => , :longitude => , :altitude => 1370, :capacity => 70
-Hut.create :name => "Undola", :latitude => , :longitude => , :altitude => , :capacity =>
-Hut.create :name => "HotelMaliovica", :latitude => , :longitude => , :altitude => , :capacity =>
-Hut.create :name => "HotelMaliovica", :latitude => , :longitude => , :altitude => 1720, :capacity => 180
+#Hut.create :name => "GoliamataMochara", :latitude => , :longitude => , :altitude => 1450, :capacity => 160
+#Hut.create :name => "HadjiRuskovi", :latitude => , :longitude => , :altitude => 936, :capacity => 105
+#Hut.create :name => "Melnik", :latitude => , :longitude => , :altitude => 404, :capacity => 40
+#Hut.create :name => "Perun", :latitude => , :longitude => , :altitude => 825, :capacity => 73
+#Hut.create :name => "Rojen", :latitude => , :longitude => , :altitude => 510, :capacity => 50
+#Hut.create :name => "Asenovgrad", :latitude => , :longitude => , :altitude => 200, :capacity => 40
+#Hut.create :name => "Bachkovo", :latitude => , :longitude => , :altitude => 377, :capacity => 54
+#Hut.create :name => "AtanasSpiridonov", :latitude => , :longitude => , :altitude => 680, :capacity => 50
+#Hut.create :name => "Cheresha", :latitude => , :longitude => , :altitude => 1100, :capacity => 33
+#Hut.create :name => "Churen", :latitude => , :longitude => , :altitude => 1450, :capacity => 43
+#Hut.create :name => "HaidushkiPoliani", :latitude => , :longitude => , :altitude => , :capacity => 19
+#Hut.create :name => "Makaza", :latitude => , :longitude => , :altitude => , :capacity => 18
+#Hut.create :name => "Manastir", :latitude => , :longitude => , :altitude => 1450, :capacity => 32
+#Hut.create :name => "Momchil", :latitude => , :longitude => , :altitude => 340, :capacity => 60
+#Hut.create :name => "MominaSulza", :latitude => , :longitude => , :altitude => 62, :capacity => 40
+#Hut.create :name => "Peshterniak", :latitude => , :longitude => , :altitude => 1140, :capacity => 90
+#Hut.create :name => "Shadeetsa", :latitude => , :longitude => , :altitude => 1150, :capacity => 60
+#Hut.create :name => "Slaveino", :latitude => , :longitude => , :altitude => 1050, :capacity => 34
+#Hut.create :name => "Snejanka", :latitude => , :longitude => , :altitude => 518, :capacity => 40
+#Hut.create :name => "Solishta", :latitude => , :longitude => , :altitude => 1150, :capacity => 30
+#Hut.create :name => "Svejest", :latitude => , :longitude => , :altitude => 450, :capacity => 45
+#Hut.create :name => "Teheran", :latitude => , :longitude => , :altitude => 1710, :capacity => 73
+#Hut.create :name => "Teshel", :latitude => , :longitude => , :altitude => 850, :capacity => 82
+#Hut.create :name => "Tunkovo", :latitude => , :longitude => , :altitude => 550, :capacity => 34
+#Hut.create :name => "Velingrad", :latitude => , :longitude => , :altitude => 812, :capacity => 116
+#Hut.create :name => "Zagrad", :latitude => , :longitude => , :altitude => 1250, :capacity => 42
+#Hut.create :name => "Eleshnica", :latitude => , :longitude => , :altitude => 865, :capacity => 72
+#Hut.create :name => "HotelMaliovica", :latitude => , :longitude => , :altitude => 1720, :capacity => 180
+#Hut.create :name => "Iafora", :latitude => , :longitude => , :altitude => 1465, :capacity => 120
+#Hut.create :name => "LedenoEzero", :latitude => , :longitude => , :altitude => 2710, :capacity => 6
+#Hut.create :name => "BialaReka", :latitude => , :longitude => , :altitude => , :capacity =>
+#Hut.create :name => "BialaReka", :latitude => , :longitude => , :altitude => 0, :capacity => 0
+#Hut.create :name => "Armeec", :latitude => , :longitude => , :altitude => 1080, :capacity => 25
+#Hut.create :name => "Akademik", :latitude => , :longitude => , :altitude => 1390, :capacity => 12
+#Hut.create :name => "BashSamokov", :latitude => , :longitude => , :altitude => 750, :capacity => 40
+#Hut.create :name => "BialaReka", :latitude => , :longitude => , :altitude => 0, :capacity => 0
+#Hut.create :name => "Butora", :latitude => , :longitude => , :altitude => 800, :capacity => 33
+#Hut.create :name => "ChudniteSkali", :latitude => , :longitude => , :altitude => 85, :capacity => 79
+#Hut.create :name => "DomKarandila", :latitude => , :longitude => , :altitude => 950, :capacity => 180
+#Hut.create :name => "Himik", :latitude => , :longitude => , :altitude => 850, :capacity => 50
+#Hut.create :name => "YavorovaLaka", :latitude => , :longitude => , :altitude => 740, :capacity => 60
+#Hut.create :name => "Iantra", :latitude => , :longitude => , :altitude => 1210, :capacity => 22
+#Hut.create :name => "IazovirKamchia", :latitude => , :longitude => , :altitude => 200, :capacity => 47
+#Hut.create :name => "Ignatica", :latitude => , :longitude => , :altitude => 344, :capacity => 16
+#Hut.create :name => "Ivailo", :latitude => , :longitude => , :altitude => 1050, :capacity => 85
+#Hut.create :name => "KaraivanovoHorishte", :latitude => , :longitude => , :altitude => 1100, :capacity => 20
+#Hut.create :name => "Karandila", :latitude => , :longitude => , :altitude => 950, :capacity => 24
+#Hut.create :name => "Klisura", :latitude => , :longitude => , :altitude => 560, :capacity => 65
+#Hut.create :name => "KomStara", :latitude => , :longitude => , :altitude => 1620, :capacity => 22
+#Hut.create :name => "KumpingChumerna", :latitude => , :longitude => , :altitude => 1450, :capacity => 40
+#Hut.create :name => "Luliak", :latitude => , :longitude => , :altitude => 303, :capacity => 50
+#Hut.create :name => "MominaPoliana", :latitude => , :longitude => , :altitude => 1640, :capacity => 80
+#Hut.create :name => "PetrohanskiProhod", :latitude => , :longitude => , :altitude => 1444, :capacity => 20
+#Hut.create :name => "Pirdop", :latitude => , :longitude => , :altitude => 686, :capacity => 100
+#Hut.create :name => "Plachkovci", :latitude => , :longitude => , :altitude => 510, :capacity => 60
+#Hut.create :name => "Planinec", :latitude => , :longitude => , :altitude => 1080, :capacity => 25
+#Hut.create :name => "Planinica", :latitude => , :longitude => , :altitude => 752, :capacity => 20
+#Hut.create :name => "PlaninskiIzvori", :latitude => , :longitude => , :altitude => 1850, :capacity => 50
+#Hut.create :name => "Pogledec", :latitude => , :longitude => , :altitude => 666, :capacity => 60
+#Hut.create :name => "SpalniaUzana", :latitude => , :longitude => , :altitude => 1240, :capacity => 36
+#Hut.create :name => "Strinava", :latitude => , :longitude => , :altitude => 272, :capacity => 40
+#Hut.create :name => "VelinDial", :latitude => , :longitude => , :altitude => 890, :capacity => 25
+#Hut.create :name => "Vidima", :latitude => , :longitude => , :altitude => 600, :capacity => 54
+#Hut.create :name => "VurbishkiProhod", :latitude => , :longitude => , :altitude => 470, :capacity => 76
+#Hut.create :name => "Zdravec", :latitude => , :longitude => , :altitude => 430, :capacity => 40
+#Hut.create :name => "ZaslonGoliamKademlia", :latitude => , :longitude => , :altitude => 2276, :capacity => 10
+#Hut.create :name => "Chivira", :latitude => , :longitude => , :altitude => 1370, :capacity => 80
+#Hut.create :name => "Haiduta", :latitude => , :longitude => , :altitude => 1100, :capacity => 10
+#Hut.create :name => "Srednogorec", :latitude => , :longitude => , :altitude => 1370, :capacity => 70
+#Hut.create :name => "Undola", :latitude => , :longitude => , :altitude => , :capacity =>
+#Hut.create :name => "HotelMaliovica", :latitude => , :longitude => , :altitude => , :capacity =>
+#Hut.create :name => "HotelMaliovica", :latitude => , :longitude => , :altitude => 1720, :capacity => 180
 
 #Hut.create :name => "Raj", :latitude => 42.6963, :longitude => 24.9311, :altitude => 1430
 #Hut.create :name => "Mazalat", :latitude => 42.7585, :longitude => 25.1147, :altitude => 1620
@@ -300,9 +298,23 @@ Review.create :score => 10, :comment => "Ne moga poweche, tolkowa qka beshe", :r
 Review.create :score => 1, :comment => "ZLE ZLE ZLE", :reviewable => Hut.all.last
 
 Path.create(
+    :latitudes=>[42.696373,42.75034], 
+    :longitudes=>[24.93111,25.00495], 
+    :time=>330, :lenght=>nil, :color => "green")
+Path.create(
+    :latitudes=>[42.696373,42.7048], 
+    :longitudes=>[24.93111,24.85215], 
+    :time=>270, :lenght=>nil, :color => "green")
+Path.create(
+    :latitudes=>[42.696373,42.7496], 
+    :longitudes=>[24.93111,24.89571], 
+    :time=>300, :lenght=>nil, :color => "green")
+
+
+Path.create(
     :latitudes=>[42.6963,42.706,42.729,42.745,42.7512], 
     :longitudes=>[24.9311,24.959,24.954,24.966,24.9938], 
-    :time=>50, :lenght=>1.2, :color => "orange")
+    :time=>330, :lenght=>1.2, :color => "orange")
 Path.create(
     :latitudes=>[42.6963,42.693,42.704,42.712,42.709,42.713,42.7110], 
     :longitudes=>[24.9311,24.941,25.003,25.019,25.022,25.026,25.0370], 
