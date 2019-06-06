@@ -2,6 +2,7 @@ class CreatePaths < ActiveRecord::Migration[5.2]
   def change
     create_table :paths do |t|
         t.string :name
+        t.boolean :approved, :default => false
         t.float :lenght
         t.integer :time
         t.string :color
@@ -9,6 +10,7 @@ class CreatePaths < ActiveRecord::Migration[5.2]
         t.text :latitudes
         t.text :longitudes
 
+        t.boolean :deleted, :default => false
         t.timestamps
     end
   end

@@ -1,13 +1,7 @@
 class Path < ApplicationRecord
     #Attributes
-    attribute :name, :string
-    attribute :lenght, :float
-    attribute :time, :integer
-    attribute :color, :string
-    attribute :description, :text
     serialize :latitudes, Array
     serialize :longitudes, Array
-    
 
     #Validators
     validates_presence_of :latitudes, :longitudes, :time, :color

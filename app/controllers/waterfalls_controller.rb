@@ -1,16 +1,15 @@
 class WaterfallsController < ApplicationController
     def index
-        wfs = Waterfall.all
+        wfs = Waterfall.where(deleted: false)
         render json: wfs
     end
 
     def show
-        id = params[:id]
-        wf = Waterfall.find(id)
+        wf = Waterfall.where(id: params[:id],deleted: false).first
         render json: { 
             :general => wf,
             :reviews => wf.reviews, 
-            :images => nil}
+            :images => wf.images}
     end
 
     def create
@@ -29,7 +28,7 @@ class WaterfallsController < ApplicationController
     end
 
     def update
-        wf = Waterfall.find params[:id]
+        wf = Waterfall.where(id: params[:id], deleted: false).first
         if not params[:name].nil? then wf.name = params[:name] end
         if not params[:latitude].nil? then wf.latitude = params[:latitude] end
         if not params[:longitude].nil? then wf.longitude = params[:longitude] end
@@ -44,7 +43,7 @@ class WaterfallsController < ApplicationController
     end
 
     def destroy
-        if Waterfall.find(params[:id]).delete
+        if Waterfall.where(id: params[:id],deleted: false).first.delete
             render json: "success"
         else
             render json: "failure"

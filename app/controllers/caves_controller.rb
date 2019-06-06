@@ -1,14 +1,14 @@
 class CavesController < ApplicationController
     def index
-        render json: Cave.all
+        render json: Cave.where(deleted: false)
     end
 
     def show
-        cave = Cave.find(params[:id])
+        cave = Cave.where(id: params[:id],deleted: false).first
         render json: { 
             :general => cave, 
             :reviews => cave.reviews, 
-            :images => nil}
+            :images => cave.images}
     end
 
     def create
@@ -28,7 +28,7 @@ class CavesController < ApplicationController
     end
 
     def update
-        cave = Cave.find params[:id]
+        cave = Cave.where(id: params[:id],deleted: false).first
         if not params[:name].nil? then cave.name = params[:name] end
         if not params[:latitude].nil? then cave.latitude = params[:latitude] end
         if not params[:longitude].nil? then cave.longitude = params[:longitude] end
@@ -44,7 +44,7 @@ class CavesController < ApplicationController
     end
     
     def destroy
-        if Cave.find(params[:id]).delete
+        if Cave.where(id: params[:id],deleted: false).first.delete
             render json: "success"
         else
             render json: "failure"

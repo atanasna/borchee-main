@@ -1,14 +1,14 @@
 class CampsitesController < ApplicationController
     def index
-        render json: Campsite.all
+        render json: Campsite.where(deleted: false)
     end
 
     def show
-        camp = Campsite.find(params[:id])
+        camp = Campsite.where(id: params[:id],deleted: false).first
         render json: { 
             :general => camp,
             :reviews => camp.reviews, 
-            :images => nil}
+            :images => camp.images}
     end
 
     def create
@@ -26,7 +26,7 @@ class CampsitesController < ApplicationController
     end
 
     def update
-        camp = Campsite.find params[:id]
+        camp = Campsite.where(id: params[:id],deleted: false).first
         if not params[:name].nil? then camp.name = params[:name] end
         if not params[:latitude].nil? then camp.latitude = params[:latitude] end
         if not params[:longitude].nil? then camp.longitude = params[:longitude] end
@@ -40,7 +40,7 @@ class CampsitesController < ApplicationController
     end
 
     def destroy
-        if Campsite.find(params[:id]).delete
+        if Campsite.where(id: params[:id],deleted: false).first.delete
             render json: "success"
         else
             render json: "failure"

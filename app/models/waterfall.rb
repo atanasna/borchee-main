@@ -1,17 +1,22 @@
 class Waterfall < ApplicationRecord
-    #Attributes
-    attribute :name, :string
-    attribute :latitude, :float
-    attribute :longitude, :float
-    attribute :description, :text
-    attribute :height, :integer
-    
     #Validators
-    validates_presence_of :name, :latitude, :longitude, :height
-    validates_uniqueness_of :latitude, :longitude
+    validates :name, presence: {message: "must not be empty"}
+    validates :latitude, 
+        presence: {message: "must not be empty"},
+        numericality: {
+            :greater_than => -90, 
+            :less_than => 90, 
+            :message  => "must be between -90 and 90"}
+    validates :longitude, 
+        presence: {message: "must not be empty"},
+        numericality: {
+            :greater_than => -180, 
+            :less_than => 180, 
+            :message  => "must be between -180 and 180"}
 
     #Relationships
     has_many :review, as: :reviewable
+    has_many :images, as: :imageable
 
     #Modules
     include Reviewable

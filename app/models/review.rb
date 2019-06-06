@@ -1,8 +1,4 @@
 class Review < ApplicationRecord
-    #Attribute
-    attribute :score, :integer
-    attribute :comment, :text
-
     #Relationships
     belongs_to :reviewable, polymorphic: true
 

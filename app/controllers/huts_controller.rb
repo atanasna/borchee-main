@@ -1,22 +1,22 @@
 class HutsController < ApplicationController
     def index
-        render json: Hut.all
+        render json: Hut.where(deleted: false)
     end
 
     def show
-        hut = Hut.find(params[:id])
+        hut = Hut.where(id: params[:id],deleted: false).first
         render json: { 
             :general => hut, 
             :score => hut.score,
             :reviews => hut.reviews, 
-            :images => nil}
+            :images => hut.images}
     end
 
     def create
         hut = Hut.create(
             :name => params[:name], 
             :latitude => params[:latitude], 
-            :longitude => params[:longitude], 
+            :longitude => params[:longitude],
             :altitude => params[:altitude],
             :description => params[:description])
 
@@ -28,7 +28,7 @@ class HutsController < ApplicationController
     end
 
     def update
-        hut = Hut.find params[:id]
+        hut = Hut.where(id: params[:id],deleted: false).first
         if not params[:name].nil? then hut.name = params[:name] end
         if not params[:altitude].nil? then hut.altitude = params[:altitude] end
         if not params[:capacity].nil? then hut.altitude = params[:capacity] end
@@ -45,7 +45,7 @@ class HutsController < ApplicationController
     end
 
     def destroy
-        if Hut.find(params[:id]).delete
+        if Hut.where(id: params[:id],deleted: false).first.delete
             render json: "success"
         else
             render json: "failure"

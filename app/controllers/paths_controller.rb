@@ -1,10 +1,10 @@
 class PathsController < ApplicationController
     def index
-        render json: Path.all
+        render json: Path.where(deleted: false)
     end
 
     def show 
-        path = Path.find(params[:id])
+        path = Path.where(id: params[:id],deleted: false).first
         render json: { 
             :general => path, 
             :score => path.score,
@@ -15,10 +15,10 @@ class PathsController < ApplicationController
     def create
         path = Path.create(
             :name => params[:name], 
+            :latitudes => params[:latitudes], 
+            :longitudes => params[:longitudes],
             :lenght => params[:lenght],
             :time => time[:time],
-            :latitudes => params[:latitudes], 
-            :longitudes => params[:longitudes], 
             :description => params[:description])
 
         if path.save
@@ -29,7 +29,7 @@ class PathsController < ApplicationController
     end
 
     def update
-        path = Path.find params[:id]
+        path = Path.where(id: params[:id],deleted: false).first
         if not params[:name].nil? then path.name = params[:name] end
         if not params[:lenght].nil? then path.lenght = params[:lenght] end
         if not params[:time].nil? then path.time = params[:time] end
@@ -45,7 +45,7 @@ class PathsController < ApplicationController
     end
 
     def destroy
-        if Path.find(params[:id]).delete
+        if Path.where(id: params[:id],deleted: false).first.delete
             render json: "success"
         else
             render json: "failure"
