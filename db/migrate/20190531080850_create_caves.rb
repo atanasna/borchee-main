@@ -7,7 +7,7 @@ class CreateCaves < ActiveRecord::Migration[5.2]
             t.boolean :approved, :default => false
             t.text :description
             t.integer :depth
-            t.integer :lenght
+            t.integer :length
 
             t.boolean :deleted, :default => false
             t.timestamps

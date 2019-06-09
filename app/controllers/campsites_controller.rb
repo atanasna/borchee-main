@@ -12,16 +12,16 @@ class CampsitesController < ApplicationController
     end
 
     def create
-        camp = Campsite.create(
+        result = Campsite.create(
             :name => params[:name], 
             :latitude => params[:latitude], 
             :longitude => params[:longitude], 
             :description => params[:description])
 
-        if camp.save
-            render json: camp
+        if result.errors.size == 0
+            render json: {:result => "success", :element => result}
         else
-            render json: "failure"
+            render json: {:result => "failure", :messages => result.errors.messages}
         end
     end
 

@@ -13,17 +13,20 @@ class HutsController < ApplicationController
     end
 
     def create
-        hut = Hut.create(
+        result = Hut.create(
             :name => params[:name], 
             :latitude => params[:latitude], 
             :longitude => params[:longitude],
             :altitude => params[:altitude],
+            :capacity => params[:capacity],
             :description => params[:description])
 
-        if hut.save
-            render json: hut
+        result.images.attach params[:images]
+
+        if result.errors.size == 0
+            render json: {:result => "success", :element => result}
         else
-            render json: "failure"
+            render json: {:result => "failure", :messages => result.errors.messages}
         end
     end
 

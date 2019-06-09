@@ -12,7 +12,7 @@ class CavesController < ApplicationController
     end
 
     def create
-        cave = Cave.create(
+        result = Cave.create(
             :name => params[:name], 
             :latitude => params[:latitude], 
             :longitude => params[:longitude], 
@@ -20,10 +20,10 @@ class CavesController < ApplicationController
             :lenght => params[:lenght],
             :description => params[:description])
 
-        if cave.save
-            render json: cave
+        if result.errors.size == 0
+            render json: {:result => "success", :element => result}
         else
-            render json: "failure"
+            render json: {:result => "failure", :messages => result.errors.messages}
         end
     end
 

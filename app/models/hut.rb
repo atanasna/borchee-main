@@ -1,22 +1,25 @@
 class Hut < ApplicationRecord
     #Validators
-    validates :name, presence: {message: "must not be empty"}
-    validates :latitude, 
-        presence: {message: "must not be empty"},
-        numericality: {
-            :greater_than => -90, 
-            :less_than => 90, 
-            :message  => "must be between -90 and 90"}
-    validates :longitude, 
-        presence: {message: "must not be empty"},
-        numericality: {
-            :greater_than => -180, 
-            :less_than => 180, 
-            :message  => "must be between -180 and 180"}
-    
+    validates :name, 
+        presence: {message: "Name must not be empty"},
+        uniqueness: {message: "Name must be unique"}
+    validates_with CoordinatesValidator
+    validates :altitude,numericality: {
+        allow_nil: true,
+        only_integer: true,
+        greater_than: 0,
+        message:"Altityde must be a whole positive number"
+    }
+    validates :capacity,numericality: {
+        allow_nil: true,
+        only_integer: true,
+        greater_than: 0,
+        message:"Capacity must be a whole positive number"
+    }
+
     #Relationships
     has_many :review, as: :reviewable
-    has_many :images, as: :imageable
+    has_many_attached :images
 
     #Modules
     include Reviewable
