@@ -5,23 +5,30 @@ class CampsitesController < ApplicationController
 
     def show
         camp = Campsite.where(id: params[:id],deleted: false).first
+        images_urls = Array.new
+        camp.images.each do |image|
+            images_urls.push url_for(image)
+        end
+
         render json: { 
             :general => camp,
+            :score => camp.score,
             :reviews => camp.reviews, 
-            :images => camp.images}
+            :images => camp.images_urls}
     end
 
     def create
-        result = Campsite.create(
+        camp = Campsite.new(
             :name => params[:name], 
             :latitude => params[:latitude], 
             :longitude => params[:longitude], 
-            :description => params[:description])
+            :description => params[:description],
+            :images => params[:images])
 
-        if result.errors.size == 0
-            render json: {:result => "success", :element => result}
+        if camp.save
+            render json: {:result => "success", :element => camp}
         else
-            render json: {:result => "failure", :messages => result.errors.messages}
+            render json: {:result => "failure", :messages => camp.errors.messages}
         end
     end
 
@@ -33,9 +40,9 @@ class CampsitesController < ApplicationController
         if not params[:description].nil? then camp.description = params[:description] end
 
         if camp.save
-            render json: camp
+            render json: {:result => "success", :element => camp}
         else
-            render json: "failure"
+            render json: {:result => "failure", :messages => camp.errors.messages}
         end
     end
 

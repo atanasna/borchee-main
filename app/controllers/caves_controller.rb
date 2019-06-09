@@ -5,25 +5,32 @@ class CavesController < ApplicationController
 
     def show
         cave = Cave.where(id: params[:id],deleted: false).first
+        images_urls = Array.new
+        cave.images.each do |image|
+            images_urls.push url_for(image)
+        end
+
         render json: { 
             :general => cave, 
+            :score => cave.score,
             :reviews => cave.reviews, 
-            :images => cave.images}
+            :images => images_urls}
     end
 
     def create
-        result = Cave.create(
+        cave = Cave.new(
             :name => params[:name], 
             :latitude => params[:latitude], 
             :longitude => params[:longitude], 
             :depth => params[:depth],
             :lenght => params[:lenght],
-            :description => params[:description])
+            :description => params[:description],
+            :images => params[:images])
 
-        if result.errors.size == 0
-            render json: {:result => "success", :element => result}
+        if cave.save
+            render json: {:result => "success", :element => cave}
         else
-            render json: {:result => "failure", :messages => result.errors.messages}
+            render json: {:result => "failure", :messages => cave.errors.messages}
         end
     end
 
@@ -37,9 +44,9 @@ class CavesController < ApplicationController
         if not params[:description].nil? then cave.description = params[:description] end
 
         if cave.save
-            render json: cave
+            render json: {:result => "success", :element => cave}
         else
-            render json: "failure"
+            render json: {:result => "failure", :messages => cave.errors.messages}
         end
     end
     

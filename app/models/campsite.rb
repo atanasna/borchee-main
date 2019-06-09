@@ -13,4 +13,7 @@ class Campsite < ApplicationRecord
     include Reviewable
     
     #Methods
+    def info
+        "#{name},#{latitude},#{longitude},#{description},#{height}"
+    end
 end

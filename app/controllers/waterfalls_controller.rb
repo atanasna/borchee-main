@@ -1,29 +1,35 @@
 class WaterfallsController < ApplicationController
     def index
-        wfs = Waterfall.where(deleted: false)
-        render json: wfs
+        render json: Waterfall.where(deleted: false)
     end
 
     def show
         wf = Waterfall.where(id: params[:id],deleted: false).first
+        images_urls = Array.new
+        wf.images.each do |image|
+            images_urls.push url_for(image)
+        end
+
         render json: { 
             :general => wf,
+            :score => wf.score,
             :reviews => wf.reviews, 
-            :images => wf.images}
+            :images => images_urls}
     end
 
     def create
-        result = Waterfall.create(
+        wf = Waterfall.new(
             :name => params[:name], 
             :latitude => params[:latitude], 
             :longitude => params[:longitude], 
             :height => params[:height],
-            :description => params[:description])
+            :description => params[:description],
+            :images => params[:images])
 
-        if result.errors.size == 0
-            render json: {:result => "success", :element => result}
+        if wf.save
+            render json: {:result => "success", :element => wf}
         else
-            render json: {:result => "failure", :messages => result.errors.messages}
+            render json: {:result => "failure", :messages => wf.errors.messages}
         end
     end
 
@@ -36,9 +42,9 @@ class WaterfallsController < ApplicationController
         if not params[:description].nil? then wf.description = params[:description] end
 
         if wf.save
-            render json: wf
+            render json: {:result => "success", :element => wf}
         else
-            render json: "failure"
+            render json: {:result => "failure", :messages => wf.errors.messages}
         end
     end
 

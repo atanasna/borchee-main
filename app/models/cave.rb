@@ -28,10 +28,4 @@ class Cave < ApplicationRecord
     def info
         "#{name},#{latitude},#{longitude},#{description},#{depth},#{lenght}"
     end
-
-    def coordinates_limit
-        
-        errors.add(:latitude, "There is already a cave in less than 25 meters")
-
-    end
 end
