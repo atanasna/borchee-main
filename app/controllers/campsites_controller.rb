@@ -10,11 +10,17 @@ class CampsitesController < ApplicationController
             images_urls.push url_for(image)
         end
 
-        render json: { 
-            :general => camp,
+        render json: camp.as_json.merge({
             :score => camp.score,
             :reviews => camp.reviews, 
-            :images => camp.images_urls}
+            :images => images_urls
+        }).to_json
+
+        #render json: { 
+        #    :general => camp,
+        #    :score => camp.score,
+        #    :reviews => camp.reviews, 
+        #    :images => images_urls}
     end
 
     def create
@@ -22,8 +28,11 @@ class CampsitesController < ApplicationController
             :name => params[:name], 
             :latitude => params[:latitude], 
             :longitude => params[:longitude], 
-            :description => params[:description],
-            :images => params[:images])
+            :description => params[:description])
+
+        if not params[:images].nil?
+            hut.images = params[:images]
+        end
 
         if camp.save
             render json: {:result => "success", :element => camp}

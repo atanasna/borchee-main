@@ -7,14 +7,19 @@ class HutsController < ApplicationController
         hut = Hut.where(id: params[:id],deleted: false).first
         images_urls = Array.new
         hut.images.each do |image|
-            images_urls.push url_for(image)
+            images_urls.push url_for(image).sub("192.168.50.115:3000","borchee.com")
         end
         
-        render json: { 
-            :general => hut, 
+        render json: hut.as_json.merge({
             :score => hut.score,
             :reviews => hut.reviews, 
-            :images => images_urls}
+            :images => images_urls
+        }).to_json
+        #render json: { 
+        #    :general => hut, 
+        #    :score => hut.score,
+        #    :reviews => hut.reviews, 
+        #    :images => images_urls}
     end
 
     def create
@@ -24,9 +29,12 @@ class HutsController < ApplicationController
             :longitude => params[:longitude],
             :altitude => params[:altitude],
             :capacity => params[:capacity],
-            :description => params[:description],
-            :images => params[:images])
+            :description => params[:description])
 
+        if not params[:images].nil?
+            hut.images = params[:images]
+        end
+        
         if hut.save
             render json: {:result => "success", :element => hut}
         else

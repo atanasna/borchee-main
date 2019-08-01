@@ -5,11 +5,18 @@ class PathsController < ApplicationController
 
     def show 
         path = Path.where(id: params[:id],deleted: false).first
-        render json: { 
-            :general => path, 
+
+        render json: path.as_json.merge({
             :score => path.score,
             :reviews => path.reviews, 
-            :images => nil}
+            :images => nil
+        }).to_json
+
+        #render json: { 
+        #    :general => path, 
+        #    :score => path.score,
+        #    :reviews => path.reviews, 
+        #    :images => nil}
     end
 
     def create

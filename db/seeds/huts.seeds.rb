@@ -106,7 +106,6 @@ Hut.create :name => "Dermenka", :latitude => 42.7302, :longitude => 24.68089, :a
 Hut.create :name => "Dobrila", :latitude => 42.71109, :longitude => 24.76102, :approved => true, :altitude => 1804, :capacity => 80
 Hut.create :name => "Gaburski", :latitude => 42.883492, :longitude => 24.716546, :approved => true, :altitude => 420, :capacity => 65
 Hut.create :name => "GorskaHija", :latitude => 42.68829, :longitude => 27.55074, :approved => true, :altitude => 200, :capacity => 26
-Hut.create :name => "Rai", :latitude => 42.696373, :longitude => 24.93111, :approved => true, :altitude => 1430, :capacity => 120
 Hut.create :name => "GorskiRai", :latitude => 43.4544, :longitude => 22.641, :approved => true, :altitude => 1450, :capacity => 38
 Hut.create :name => "Gramadliva", :latitude => 42.79261, :longitude => 25.658416, :approved => true, :altitude => 876, :capacity => 40
 Hut.create :name => "GramadlivaSki", :latitude => 42.79393, :longitude => 25.65488, :approved => true, :altitude => 860, :capacity => 15
@@ -180,6 +179,17 @@ Hut.create :name => "Voden_Kamak", :latitude => 42.464505, :longitude => 24.7559
 Hut.create :name => "Zagaza", :latitude => 41.767807, :longitude => 23.324059, :approved => true, :altitude => 1400, :capacity => 50
 Hut.create :name => "Partizanska Pesen", :latitude => 42.784264, :longitude => 25.197934, :approved => true, :altitude => nil, :capacity => nil
 Hut.create :name => "Mandrata", :latitude => 42.75034, :longitude => 25.00495, :approved => true, :altitude => nil, :capacity => 22
+
+Hut.create :name => "Rai", :latitude => 42.696373, :longitude => 24.93111, :approved => true, :altitude => 1430, :capacity => 120, :description => '<p>It is located on the southern slopes of the mountain\'s highest peak - Botev, in an area that is famous for its beauty. The hut is built on a small green terrace bathed in sunlight and fenced by a dense forest of old beech trees down from the south. Above the hut the hillside climbs steeply up until it reaches an immense wall of vertical grey rocks - a giant threshold of some mythical house hidden in the clouds above. The waters of the melting snows fall down from these high cliffs forming a beautiful waterfall. Its name is Raiskoto praskalo.</p>'\
+'<p>If you want to visit this heavenly place (for that is what the hut\'s name means - in Bulgarian \'rai\' is heaven) you first need to get to Kalofer - a small town located 160 km east of Sofia. It is built on the banks of the river Tundzha, hidden between the hills of a ridge that stretches to the south of the Botev Peak. You can reached it by train, by bus or by car depending on what your budget is and how much time you have to spare. The trains are the cheapest though also the slowest option. A ride from the capital usually takes around 3 hours and then you have to take the minibus that transfers the passengers from the train station to the centre of Kalofer. Whenever there are enough tourists to pay for it, the minibus may also go to the locality of Panitsite (6 km north of the town) where the tourist path to hut \'Rai\' starts.</p>' \
+'<p>The route begins with a steep climb up the short shoulder of a hill that is covered with trees. In less than 20 minutes you will get to its crest where you will see the entrance of the Central Balkan National Park. From there on the path follows a dirt road that gently gathers high through a thin forest before it gets to an open area. If the day happens to be a clear one, there is a beautiful panoramic view towards the southern slopes of Botev and the peaks west and east of it. Continue norht-northwest by following the road and the blue markings. At the north end of the open space the road turns again into a narrower trail which soon dives into a shadowy forest. After walking for about an hour or so you will get to a small bridge. There begins the last and also the most difficult part of our route. The trail starts to zig-zag up a steep slope and for those who happen to get out of breath this section may turn out to be somewhat daunting. Do not despair but pace yourself and rest often. The hut isn\'t far away. Once you get out of the forest, you will reach a saddle that lies between peak Malak Raiski Kupen and the rock wall to the right. Your goal is few hundred metres down the other side of the ridge.</p>' \
+'<p>The hut \'Rai\' was built in 1935. It works year round with July and August being the busiest time of the year. There are 113 places (80 separate beds and 33 bunkbed places). The dining room is at the first floor and there you can buy drinks and food though you may find the choice somewhat limited if you visit the place in low season.</p>' 
+#attach images directly from path
+hut = Hut.last
+hut.images.attach(io: File.open('db/pictures/rai1.jpg'), filename: 'rai1.jpg', content_type: 'image/jpg')
+hut.images.attach(io: File.open('db/pictures/rai2.jpg'), filename: 'rai2.jpg', content_type: 'image/jpg')
+hut.images.attach(io: File.open('db/pictures/rai3.jpg'), filename: 'rai3.jpg', content_type: 'image/jpg')
+hut.images.attach(io: File.open('db/pictures/rai4.jpg'), filename: 'rai4.jpg', content_type: 'image/jpg')
 
 # NO COORDINATES
 #Hut.create :name => "GoliamataMochara", :latitude => , :longitude => , :approved => true, :altitude => 1450, :capacity => 160
@@ -261,3 +271,7 @@ Hut.create :name => "Mandrata", :latitude => 42.75034, :longitude => 25.00495, :
 #Hut.create :name => "Triglav", :latitude => 42.7110 , :longitude => 25.0370, :approved => true, :altitude => 1950
 #Hut.create :name => "Tazha", :latitude => 42.7512 , :longitude => 24.9938, :approved => true, :altitude => 1950
 #Hut.create :name => "Uzana", :latitude => 42.7509 , :longitude => 25.2385, :approved => true, :altitude => 1240
+
+#USA
+#Doesnt Exist
+Hut.create :name => "Mandrata23", :latitude => 37.887347, :longitude => -119.235068, :approved => true, :altitude => 1115, :capacity => 22

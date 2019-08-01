@@ -9,12 +9,16 @@ class WaterfallsController < ApplicationController
         wf.images.each do |image|
             images_urls.push url_for(image)
         end
-
-        render json: { 
-            :general => wf,
+        render json: wf.as_json.merge({
             :score => wf.score,
             :reviews => wf.reviews, 
-            :images => images_urls}
+            :images => images_urls
+        }).to_json
+        #render json: { 
+        #    :general => wf,
+        #    :score => wf.score,
+        #    :reviews => wf.reviews, 
+        #    :images => images_urls}
     end
 
     def create
@@ -23,9 +27,11 @@ class WaterfallsController < ApplicationController
             :latitude => params[:latitude], 
             :longitude => params[:longitude], 
             :height => params[:height],
-            :description => params[:description],
-            :images => params[:images])
+            :description => params[:description])
 
+        if not params[:images].nil?
+            hut.images = params[:images]
+        end
         if wf.save
             render json: {:result => "success", :element => wf}
         else

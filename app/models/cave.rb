@@ -3,8 +3,6 @@ class Cave < ApplicationRecord
     validates :name, 
         presence: {message: "Name must not be empty"},
         uniqueness: {message: "Name must be unique"}
-    
-    validates_with CoordinatesValidator
     validates :depth, numericality: {
         allow_nil: true,
         only_integer: true,
@@ -17,6 +15,9 @@ class Cave < ApplicationRecord
         greater_than: 0,
         message:"Length must be a whole positive number"
     }
+    validates_with CoordinatesValidator
+    validates_with ImagesValidator
+
     #Relationships
     has_many :review, as: :reviewable
     has_many_attached :images

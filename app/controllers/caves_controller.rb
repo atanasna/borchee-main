@@ -10,11 +10,17 @@ class CavesController < ApplicationController
             images_urls.push url_for(image)
         end
 
-        render json: { 
-            :general => cave, 
+        render json: cave.as_json.merge({
             :score => cave.score,
             :reviews => cave.reviews, 
-            :images => images_urls}
+            :images => images_urls
+        }).to_json
+        
+        #render json: { 
+        #    :general => cave, 
+        #    :score => cave.score,
+        #    :reviews => cave.reviews, 
+        #    :images => images_urls}
     end
 
     def create
@@ -23,9 +29,12 @@ class CavesController < ApplicationController
             :latitude => params[:latitude], 
             :longitude => params[:longitude], 
             :depth => params[:depth],
-            :lenght => params[:lenght],
-            :description => params[:description],
-            :images => params[:images])
+            :length => params[:length],
+            :description => params[:description])
+
+        if not params[:images].nil?
+            hut.images = params[:images]
+        end
 
         if cave.save
             render json: {:result => "success", :element => cave}
