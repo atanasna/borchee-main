@@ -1,56 +1,106 @@
-Path.create(
-    :latitudes=>[42.696373,42.696936, 42.700798, 42.709718, 42.717054, 42.739774, 42.748354, 42.75034], 
-    :longitudes=>[24.93111,24.944916,24.957705,24.981049,24.983109,24.981774,24.993527,25.00495], 
-    :time=>330, :lenght=>nil, :color => "red")
-Path.create(
-    :latitudes=>[42.696373,42.692836,42.689000,42.694819,42.704126,42.709314,42.710466,42.709291, 42.7048], 
-    :longitudes=>[24.93111,24.909335, 24.907899, 24.898498, 24.887737, 24.876279, 24.865332, 24.853891,24.85215], 
-    :time=>270, :lenght=>nil, :color => "yellow")
-Path.create(
-    :latitudes=>[42.696373,42.698939,42.710090,42.715348,42.726805,42.736525,42.743022,42.746399,42.748952,42.7496], 
-    :longitudes=>[24.93111,24.914257,24.903647,24.895661,24.887989,24.889043,24.893964,24.897300,24.897987,24.89571], 
-    :time=>300, :lenght=>nil, :color => "green")
-Path.create(
-    :latitudes=>[42.696373,42.707250, 42.715097, 42.716505], 
-    :longitudes=>[24.93111,24.932124,24.925758,24.918349], 
-    :time=>210, :lenght=>nil, :color => "green")
-Path.create(
-    :latitudes=>[42.6963,42.706,42.729,42.745,42.7512], 
-    :longitudes=>[24.9311,24.959,24.954,24.966,24.9938], 
-    :time=>330, :lenght=>1.2, :color => "orange")
-Path.create(
-    :latitudes=>[42.6963,42.693,42.704,42.712,42.709,42.713,42.7110], 
-    :longitudes=>[24.9311,24.941,25.003,25.019,25.022,25.026,25.0370], 
-    :time=>110, :lenght=>3, :color => "green")
-Path.create(
-    :latitudes=>[42.7512,42.735,42.7110], 
-    :longitudes=>[24.9938,24.994,25.0370], 
-    :time=>160, :lenght=>4.5, :color => "blue")
-Path.create(
-    :latitudes=>[41.73434,41.74285], 
-    :longitudes=>[23.52475,23.46786], 
-    :time=>270, :lenght=>nil, :color => "green")
-Path.create(
-    :latitudes=>[41.73434,41.6988], 
-    :longitudes=>[23.52475,23.4829], 
-    :time=>210, :lenght=>nil, :color => "green")
-Path.create(
-    :latitudes=>[41.74285,41.6988], 
-    :longitudes=>[23.46786,23.4829], 
-    :time=>150, :lenght=>nil, :color => "green")
-Path.create(
-    :latitudes=>[41.6988,41.7567], 
-    :longitudes=>[23.4829,23.41638], 
-    :time=>390, :lenght=>nil, :color => "green")
-Path.create(
-    :latitudes=>[41.6988,41.67476], 
-    :longitudes=>[23.4829,23.42849], 
-    :time=>180, :lenght=>nil, :color => "green")
-Path.create(
-    :latitudes=>[41.6988,41.67018], 
-    :longitudes=>[23.4829,23.39162], 
-    :time=>240, :lenght=>nil, :color => "green")
-Path.create(
-    :latitudes=>[41.6988,41.631786], 
-    :longitudes=>[23.4829,23.497795], 
-    :time=>150, :lenght=>nil, :color => "green")
+def seedTracks
+    Path.fromGpxFile("/home/king/borche/borche-backend/db/paths/bg/StaraPlanina/att_47.gpx",200).map{|track| track.save} # ok
+    Path.fromGpxFile("/home/king/borche/borche-backend/db/paths/bg/StaraPlanina/att_75.gpx",200).map{|track| track.save} # ok
+    Path.fromGpxFile("/home/king/borche/borche-backend/db/paths/bg/StaraPlanina/att_212.gpx",200).map{|track| track.save} # ok
+    Path.fromGpxFile("/home/king/borche/borche-backend/db/paths/bg/StaraPlanina/att_55.gpx",200).map{|track| track.save} # ok 
+    Path.fromGpxFile("/home/king/borche/borche-backend/db/paths/bg/StaraPlanina/att_38.gpx",200).map{|track| track.save} # ok 
+    Path.fromGpxFile("/home/king/borche/borche-backend/db/paths/bg/StaraPlanina/att_43.gpx",200).map{|track| track.save} # ok
+    Path.fromGpxFile("/home/king/borche/borche-backend/db/paths/bg/StaraPlanina/att_53.gpx",200).map{|track| track.save} # ok
+    Path.fromGpxFile("/home/king/borche/borche-backend/db/paths/bg/StaraPlanina/att_85.gpx",200).map{|track| track.save} # ok
+    Path.fromGpxFile("/home/king/borche/borche-backend/db/paths/bg/StaraPlanina/att_119.gpx",200).map{|track| track.save} # ok
+    Path.fromGpxFile("/home/king/borche/borche-backend/db/paths/bg/StaraPlanina/att_61.gpx",200).map{|track| track.save} # ok
+    Path.fromGpxFile("/home/king/borche/borche-backend/db/paths/bg/StaraPlanina/att_127.gpx",200).map{|track| track.save} # ok
+    Path.fromGpxFile("/home/king/borche/borche-backend/db/paths/bg/StaraPlanina/att_133.gpx",200).map{|track| track.save} # ok
+    Path.fromGpxFile("/home/king/borche/borche-backend/db/paths/bg/StaraPlanina/att_129.gpx",200).map{|track| track.save} # ok
+    Path.fromGpxFile("/home/king/borche/borche-backend/db/paths/bg/StaraPlanina/att_123.gpx",200).map{|track| track.save} # ok
+    Path.fromGpxFile("/home/king/borche/borche-backend/db/paths/bg/StaraPlanina/att_49.gpx",200).map{|track| track.save}  # ok
+    Path.fromGpxFile("/home/king/borche/borche-backend/db/paths/bg/StaraPlanina/att_28.gpx",200).map{|track| track.save} # ok
+    Path.fromGpxFile("/home/king/borche/borche-backend/db/paths/bg/StaraPlanina/att_59.gpx",200).map{|track| track.save} # ok
+    Path.fromGpxFile("/home/king/borche/borche-backend/db/paths/bg/StaraPlanina/att_73.gpx",200).map{|track| track.save} # ok
+    Path.fromGpxFile("/home/king/borche/borche-backend/db/paths/bg/StaraPlanina/att_69.gpx",200).map{|track| track.save} # ok
+    Path.fromGpxFile("/home/king/borche/borche-backend/db/paths/bg/StaraPlanina/att_205.gpx",200).map{|track| track.save} # ok
+    Path.fromGpxFile("/home/king/borche/borche-backend/db/paths/bg/StaraPlanina/att_135.gpx",200).map{|track| track.save} # ok
+    Path.fromGpxFile("/home/king/borche/borche-backend/db/paths/bg/StaraPlanina/att_111.gpx",200).map{|track| track.save} # ok
+    Path.fromGpxFile("/home/king/borche/borche-backend/db/paths/bg/StaraPlanina/att_57.gpx",200).map{|track| track.save} # ok
+    Path.fromGpxFile("/home/king/borche/borche-backend/db/paths/bg/StaraPlanina/att_34.gpx",200).map{|track| track.save} # ok
+    Path.fromGpxFile("/home/king/borche/borche-backend/db/paths/bg/StaraPlanina/att_83.gpx",200).map{|track| track.save} # ok
+    Path.fromGpxFile("/home/king/borche/borche-backend/db/paths/bg/StaraPlanina/att_97.gpx",200).map{|track| track.save} # ok
+    Path.fromGpxFile("/home/king/borche/borche-backend/db/paths/bg/StaraPlanina/att_99.gpx",200).map{|track| track.save} # ok
+    Path.fromGpxFile("/home/king/borche/borche-backend/db/paths/bg/StaraPlanina/att_65.gpx",200).map{|track| track.save} # ok
+    Path.fromGpxFile("/home/king/borche/borche-backend/db/paths/bg/StaraPlanina/att_67.gpx",200).map{|track| track.save} # ok
+    Path.fromGpxFile("/home/king/borche/borche-backend/db/paths/bg/StaraPlanina/att_109.gpx",200).map{|track| track.save} # ok
+    Path.fromGpxFile("/home/king/borche/borche-backend/db/paths/bg/StaraPlanina/att_77_1.gpx",200).map{|track| track.save}
+    Path.fromGpxFile("/home/king/borche/borche-backend/db/paths/bg/StaraPlanina/att_77_2.gpx",200).map{|track| track.save}
+    Path.fromGpxFile("/home/king/borche/borche-backend/db/paths/bg/StaraPlanina/att_77_3.gpx",200).map{|track| track.save}
+    Path.fromGpxFile("/home/king/borche/borche-backend/db/paths/bg/StaraPlanina/att_115_1.gpx",200).map{|track| track.save}
+    Path.fromGpxFile("/home/king/borche/borche-backend/db/paths/bg/StaraPlanina/att_115_2.gpx",200).map{|track| track.save}
+    Path.fromGpxFile("/home/king/borche/borche-backend/db/paths/bg/StaraPlanina/att_113_1.gpx",200).map{|track| track.save}
+    Path.fromGpxFile("/home/king/borche/borche-backend/db/paths/bg/StaraPlanina/att_113_2.gpx",200).map{|track| track.save}
+    Path.fromGpxFile("/home/king/borche/borche-backend/db/paths/bg/StaraPlanina/att_107_1.gpx",200).map{|track| track.save}
+    Path.fromGpxFile("/home/king/borche/borche-backend/db/paths/bg/StaraPlanina/att_107_2.gpx",200).map{|track| track.save}
+    Path.fromGpxFile("/home/king/borche/borche-backend/db/paths/bg/StaraPlanina/att_107_3.gpx",200).map{|track| track.save}
+    Path.fromGpxFile("/home/king/borche/borche-backend/db/paths/bg/StaraPlanina/att_107_4.gpx",200).map{|track| track.save}
+    Path.fromGpxFile("/home/king/borche/borche-backend/db/paths/bg/StaraPlanina/att_107_5.gpx",200).map{|track| track.save}
+    Path.fromGpxFile("/home/king/borche/borche-backend/db/paths/bg/StaraPlanina/att_117_1.gpx",200).map{|track| track.save}
+    Path.fromGpxFile("/home/king/borche/borche-backend/db/paths/bg/StaraPlanina/att_117_2.gpx",200).map{|track| track.save}
+    Path.fromGpxFile("/home/king/borche/borche-backend/db/paths/bg/StaraPlanina/att_117_3.gpx",200).map{|track| track.save}
+    Path.fromGpxFile("/home/king/borche/borche-backend/db/paths/bg/StaraPlanina/att_93_1.gpx",200).map{|track| track.save}
+    Path.fromGpxFile("/home/king/borche/borche-backend/db/paths/bg/StaraPlanina/att_93_2.gpx",200).map{|track| track.save}
+    Path.fromGpxFile("/home/king/borche/borche-backend/db/paths/bg/StaraPlanina/att_93_3.gpx",200).map{|track| track.save}
+    Path.fromGpxFile("/home/king/borche/borche-backend/db/paths/bg/StaraPlanina/att_95_1.gpx",200).map{|track| track.save}
+    Path.fromGpxFile("/home/king/borche/borche-backend/db/paths/bg/StaraPlanina/att_95_2.gpx",200).map{|track| track.save}
+    Path.fromGpxFile("/home/king/borche/borche-backend/db/paths/bg/StaraPlanina/att_95_3.gpx",200).map{|track| track.save}
+    Path.fromGpxFile("/home/king/borche/borche-backend/db/paths/bg/StaraPlanina/att_95_4.gpx",200).map{|track| track.save}
+    Path.fromGpxFile("/home/king/borche/borche-backend/db/paths/bg/StaraPlanina/att_26_1.gpx",200).map{|track| track.save}
+    Path.fromGpxFile("/home/king/borche/borche-backend/db/paths/bg/StaraPlanina/att_26_2.gpx",200).map{|track| track.save}
+    Path.fromGpxFile("/home/king/borche/borche-backend/db/paths/bg/StaraPlanina/att_26_3.gpx",200).map{|track| track.save}
+    Path.fromGpxFile("/home/king/borche/borche-backend/db/paths/bg/StaraPlanina/att_26_4.gpx",200).map{|track| track.save}
+    Path.fromGpxFile("/home/king/borche/borche-backend/db/paths/bg/StaraPlanina/att_26_5.gpx",200).map{|track| track.save}
+    Path.fromGpxFile("/home/king/borche/borche-backend/db/paths/bg/StaraPlanina/att_26_6.gpx",200).map{|track| track.save}
+    Path.fromGpxFile("/home/king/borche/borche-backend/db/paths/bg/StaraPlanina/att_26_7.gpx",200).map{|track| track.save}
+    Path.fromGpxFile("/home/king/borche/borche-backend/db/paths/bg/StaraPlanina/att_26_8.gpx",200).map{|track| track.save}
+    Path.fromGpxFile("/home/king/borche/borche-backend/db/paths/bg/StaraPlanina/att_26_9.gpx",200).map{|track| track.save}
+
+    #PIRIN
+    #Path.fromGpxFile("/home/king/borche/borche-backend/db/paths/bg/Pirin/around_Bezbog.gpx",200).map{|track| track.save}
+    Path.fromGpxFile("/home/king/borche/borche-backend/db/paths/bg/Pirin/h_bezbog_v_Bezbog.gpx",200).map{|track| track.save}
+    #Path.fromGpxFile("/home/king/borche/borche-backend/db/paths/bg/Pirin/h_Bezbog_v_Polejan.gpx",200).map{|track| track.save} #maybe
+    #Path.fromGpxFile("/home/king/borche/borche-backend/db/paths/bg/Pirin/h_Damqnica_h_Bezbog2.gpx",200).map{|track| track.save} #nok
+    Path.fromGpxFile("/home/king/borche/borche-backend/db/paths/bg/Pirin/h_Damqnica_h_Bezbog.gpx",200).map{|track| track.save}
+    #Path.fromGpxFile("/home/king/borche/borche-backend/db/paths/bg/Pirin/h_Demjanica_zasl_Tevnoto_ezero2.gpx",200).map{|track| track.save} #covered
+    Path.fromGpxFile("/home/king/borche/borche-backend/db/paths/bg/Pirin/h_Demjanica_zasl_Tevnoto_ezero.gpx",200).map{|track| track.save}
+    Path.fromGpxFile("/home/king/borche/borche-backend/db/paths/bg/Pirin/h_Javorov_zaslon_Koncheto.gpx",200).map{|track| track.save}
+    Path.fromGpxFile("/home/king/borche/borche-backend/db/paths/bg/Pirin/h_Vihren_h_Demjanica.gpx",200).map{|track| track.save}
+    #Path.fromGpxFile("/home/king/borche/borche-backend/db/paths/bg/Pirin/Koncheto2.gpx",200).map{|track| track.save} #nok
+    #Path.fromGpxFile("/home/king/borche/borche-backend/db/paths/bg/Pirin/koncheto.gpx",200).map{|track| track.save} #revision
+    #Path.fromGpxFile("/home/king/borche/borche-backend/db/paths/bg/Pirin/MechaPoliana_Mozgovica.gpx",200).map{|track| track.save} #unknown
+    #Path.fromGpxFile("/home/king/borche/borche-backend/db/paths/bg/Pirin/Melnishko_Plato.gpx",200).map{|track| track.save} #??
+    Path.fromGpxFile("/home/king/borche/borche-backend/db/paths/bg/Pirin/Pirin_9.gpx",200).map{|track| track.save}
+    Path.fromGpxFile("/home/king/borche/borche-backend/db/paths/bg/Pirin/PIRIN_Tevno_Ezero.gpx",200).map{|track| track.save}
+    #Path.fromGpxFile("/home/king/borche/borche-backend/db/paths/bg/Pirin/PIRIN_Tevno-Kremenski.gpx",200).map{|track| track.save} #??
+    Path.fromGpxFile("/home/king/borche/borche-backend/db/paths/bg/Pirin/pirin_track_po_biloto.gpx",200).map{|track| track.save}
+    Path.fromGpxFile("/home/king/borche/borche-backend/db/paths/bg/Pirin/popinaLaka_spanoPole_pesha.gpx",200).map{|track| track.save}
+    #Path.fromGpxFile("/home/king/borche/borche-backend/db/paths/bg/Pirin/PopinanaLaka_v_Kamenica_PopinaLaka.gpx",200).map{|track| track.save}
+    Path.fromGpxFile("/home/king/borche/borche-backend/db/paths/bg/Pirin/Predela_h_Javorov.gpx",200).map{|track| track.save}
+    #Path.fromGpxFile("/home/king/borche/borche-backend/db/paths/bg/Pirin/sandanski_lilianovo.gpx",200).map{|track| track.save}
+    Path.fromGpxFile("/home/king/borche/borche-backend/db/paths/bg/Pirin/Tevno.gpx",200).map{|track| track.save}
+    #Path.fromGpxFile("/home/king/borche/borche-backend/db/paths/bg/Pirin/vihren_ezera.gpx",200).map{|track| track.save}
+    Path.fromGpxFile("/home/king/borche/borche-backend/db/paths/bg/Pirin/v_MalakPolejan_zasl_TevnoEzero.gpx",200).map{|track| track.save}
+    #Path.fromGpxFile("/home/king/borche/borche-backend/db/paths/bg/Pirin/v_Polejan_v_MalakPolejan.gpx",200).map{|track| track.save}
+    Path.fromGpxFile("/home/king/borche/borche-backend/db/paths/bg/Pirin/zasl_Koncheto_h_Vihren.gpx",200).map{|track| track.save}
+    #Path.fromGpxFile("/home/king/borche/borche-backend/db/paths/bg/Pirin/zasl_Tevnoto_ezero_Vihren.gpx",200).map{|track| track.save}
+
+
+    #Path.fromGpxFile("/home/king/borche/borche-backend/db/paths/att_91.gpx",200).map{|track| track.save} # ends nowhere
+    #Path.fromGpxFile("/home/king/borche/borche-backend/db/paths/att_30.gpx",200).map{|track| track.save}  # ends nowhere
+    #Path.fromGpxFile("/home/king/borche/borche-backend/db/paths/att_81.gpx",200).map{|track| track.save} # ends nowhere
+    #Path.fromGpxFile("/home/king/borche/borche-backend/db/paths/att_87.gpx",200).map{|track| track.save} # ends nowhere
+    #Path.fromGpxFile("/home/king/borche/borche-backend/db/paths/att_105.gpx",200).map{|track| track.save} # ends nowhere
+    #
+    #Path.fromGpxFile("/home/king/borche/borche-backend/db/paths/att_121.gpx",200).map{|track| track.save} # road not ekopath
+    #Path.fromGpxFile("/home/king/borche/borche-backend/db/paths/att_103.gpx",200).map{|track| track.save}  # wrong
+    #Path.fromGpxFile("/home/king/borche/borche-backend/db/paths/att_101.gpx",200).map{|track| track.save} # wrong
+    return nil
+end
+
+seedTracks

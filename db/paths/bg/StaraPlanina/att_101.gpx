@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" creator="MapSource 6.15.11" version="1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+
+  <metadata>
+    <link href="http://www.garmin.com">
+      <text>Garmin International</text>
+    </link>
+    <time>2011-09-02T07:19:12Z</time>
+    <bounds maxlat="42.7046978" maxlon="24.8536040" minlat="42.7012180" minlon="24.8519876"/>
+  </metadata>
+
+  <trk>
+    <name>A38. х. “Васил Левски” – Пръскалото – в резерват “Стара река”</name>
+    <extensions>
+      <gpxx:TrackExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+        <gpxx:DisplayColor>White</gpxx:DisplayColor>
+      </gpxx:TrackExtension>
+    </extensions>
+    <trkseg>
+      <trkpt lat="42.7046978" lon="24.8521623">
+        <ele>1364.2480469</ele>
+        <time>2011-05-22T12:20:50Z</time>
+      </trkpt>
+      <trkpt lat="42.7046105" lon="24.8521098">
+        <ele>1363.2868652</ele>
+        <time>2011-05-22T12:22:05Z</time>
+      </trkpt>
+      <trkpt lat="42.7044350" lon="24.8520065">
+        <ele>1361.3642578</ele>
+        <time>2011-05-22T12:22:16Z</time>
+      </trkpt>
+      <trkpt lat="42.7043358" lon="24.8519876">
+        <ele>1356.0769043</ele>
+        <time>2011-05-22T12:22:27Z</time>
+      </trkpt>
+      <trkpt lat="42.7043230" lon="24.8520017">
+        <ele>1355.5961914</ele>
+        <time>2011-05-22T12:22:28Z</time>
+      </trkpt>
+      <trkpt lat="42.7041502" lon="24.8521023">
+        <ele>1350.3090820</ele>
+        <time>2011-05-22T12:22:34Z</time>
+      </trkpt>
+      <trkpt lat="42.7040778" lon="24.8520498">
+        <ele>1346.4638672</ele>
+        <time>2011-05-22T12:22:44Z</time>
+      </trkpt>
+      <trkpt lat="42.7039423" lon="24.8520812">
+        <ele>1346.4638672</ele>
+        <time>2011-05-22T12:22:55Z</time>
+      </trkpt>
+      <trkpt lat="42.7038371" lon="24.8522265">
+        <ele>1345.5024414</ele>
+        <time>2011-05-22T12:23:09Z</time>
+      </trkpt>
+      <trkpt lat="42.7038121" lon="24.8523847">
+        <ele>1345.5024414</ele>
+        <time>2011-05-22T12:23:27Z</time>
+      </trkpt>
+      <trkpt lat="42.7038056" lon="24.8524276">
+        <ele>1345.5024414</ele>
+        <time>2011-05-22T12:23:29Z</time>
+      </trkpt>
+      <trkpt lat="42.7036511" lon="24.8526566">
+        <ele>1344.0605469</ele>
+        <time>2011-05-22T12:23:45Z</time>
+      </trkpt>
+      <trkpt lat="42.7036273" lon="24.8527505">
+        <ele>1345.0217285</ele>
+        <time>2011-05-22T12:23:59Z</time>
+      </trkpt>
+      <trkpt lat="42.7035663" lon="24.8527617">
+        <ele>1337.8117676</ele>
+        <time>2011-05-22T12:24:15Z</time>
+      </trkpt>
+      <trkpt lat="42.7034429" lon="24.8527728">
+        <ele>1340.2153320</ele>
+        <time>2011-05-22T12:24:33Z</time>
+      </trkpt>
+      <trkpt lat="42.7032895" lon="24.8529062">
+        <ele>1344.5410156</ele>
+        <time>2011-05-22T12:24:50Z</time>
+      </trkpt>
+      <trkpt lat="42.7029601" lon="24.8528603">
+        <ele>1347.4250488</ele>
+        <time>2011-05-22T12:25:25Z</time>
+      </trkpt>
+      <trkpt lat="42.7028980" lon="24.8528684">
+        <ele>1348.3862305</ele>
+        <time>2011-05-22T12:26:04Z</time>
+      </trkpt>
+      <trkpt lat="42.7028049" lon="24.8527558">
+        <ele>1349.3476563</ele>
+        <time>2011-05-22T12:26:15Z</time>
+      </trkpt>
+      <trkpt lat="42.7027566" lon="24.8527544">
+        <ele>1349.8283691</ele>
+        <time>2011-05-22T12:26:28Z</time>
+      </trkpt>
+      <trkpt lat="42.7025521" lon="24.8528148">
+        <ele>1376.2646484</ele>
+        <time>2011-05-22T12:33:47Z</time>
+      </trkpt>
+      <trkpt lat="42.7024144" lon="24.8528834">
+        <ele>1370.9772949</ele>
+        <time>2011-05-22T12:33:35Z</time>
+      </trkpt>
+      <trkpt lat="42.7023975" lon="24.8529096">
+        <ele>1370.0158691</ele>
+        <time>2011-05-22T12:33:32Z</time>
+      </trkpt>
+      <trkpt lat="42.7023257" lon="24.8529989">
+        <ele>1368.0932617</ele>
+        <time>2011-05-22T12:33:21Z</time>
+      </trkpt>
+      <trkpt lat="42.7023499" lon="24.8530311">
+        <ele>1369.0546875</ele>
+        <time>2011-05-22T12:33:12Z</time>
+      </trkpt>
+      <trkpt lat="42.7023645" lon="24.8531450">
+        <ele>1368.5739746</ele>
+        <time>2011-05-22T12:33:03Z</time>
+      </trkpt>
+      <trkpt lat="42.7023367" lon="24.8532574">
+        <ele>1364.7287598</ele>
+        <time>2011-05-22T12:32:53Z</time>
+      </trkpt>
+      <trkpt lat="42.7022763" lon="24.8534325">
+        <ele>1364.2480469</ele>
+        <time>2011-05-22T12:32:37Z</time>
+      </trkpt>
+      <trkpt lat="42.7021133" lon="24.8534643">
+        <ele>1370.0158691</ele>
+        <time>2011-05-22T12:32:26Z</time>
+      </trkpt>
+      <trkpt lat="42.7020391" lon="24.8534875">
+        <ele>1370.9772949</ele>
+        <time>2011-05-22T12:32:24Z</time>
+      </trkpt>
+      <trkpt lat="42.7019251" lon="24.8534863">
+        <ele>1373.8613281</ele>
+        <time>2011-05-22T12:32:19Z</time>
+      </trkpt>
+      <trkpt lat="42.7018236" lon="24.8534864">
+        <ele>1373.8613281</ele>
+        <time>2011-05-22T12:32:15Z</time>
+      </trkpt>
+      <trkpt lat="42.7016360" lon="24.8535294">
+        <ele>1375.3032227</ele>
+        <time>2011-05-22T12:32:06Z</time>
+      </trkpt>
+      <trkpt lat="42.7014983" lon="24.8534959">
+        <ele>1375.7839355</ele>
+        <time>2011-05-22T12:31:58Z</time>
+      </trkpt>
+      <trkpt lat="42.7012180" lon="24.8536040">
+        <ele>1379.1484375</ele>
+        <time>2011-05-22T12:30:24Z</time>
+      </trkpt>
+    </trkseg>
+  </trk>
+
+</gpx>

@@ -8,3 +8,4 @@ Rails.application.configure do
   config.eager_load = true
   config.active_storage.service = :local
 end
+

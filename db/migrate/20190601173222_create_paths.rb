@@ -3,7 +3,7 @@ class CreatePaths < ActiveRecord::Migration[5.2]
     create_table :paths do |t|
         t.string :name
         t.boolean :approved, :default => false
-        t.float :lenght
+        t.float :distance
         t.integer :time
         t.string :color
         t.text :description

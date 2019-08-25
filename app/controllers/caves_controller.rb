@@ -7,7 +7,7 @@ class CavesController < ApplicationController
         cave = Cave.where(id: params[:id],deleted: false).first
         images_urls = Array.new
         cave.images.each do |image|
-            images_urls.push url_for(image)
+            images_urls.push url_for(image).sub("192.168.50.115:3000","api.borchee.com")
         end
 
         render json: cave.as_json.merge({

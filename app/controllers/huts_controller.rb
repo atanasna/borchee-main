@@ -7,7 +7,7 @@ class HutsController < ApplicationController
         hut = Hut.where(id: params[:id],deleted: false).first
         images_urls = Array.new
         hut.images.each do |image|
-            images_urls.push url_for(image).sub("192.168.50.115:3000","borchee.com")
+            images_urls.push url_for(image).sub("192.168.50.115:3000","api.borchee.com")
         end
         
         render json: hut.as_json.merge({

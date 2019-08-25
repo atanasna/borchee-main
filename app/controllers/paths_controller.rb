@@ -24,7 +24,7 @@ class PathsController < ApplicationController
             :name => params[:name], 
             :latitudes => params[:latitudes], 
             :longitudes => params[:longitudes],
-            :lenght => params[:lenght],
+            :distance => params[:distance],
             :time => time[:time],
             :description => params[:description])
 
@@ -38,7 +38,7 @@ class PathsController < ApplicationController
     def update
         path = Path.where(id: params[:id],deleted: false).first
         if not params[:name].nil? then path.name = params[:name] end
-        if not params[:lenght].nil? then path.lenght = params[:lenght] end
+        if not params[:distance].nil? then path.distance = params[:distance] end
         if not params[:time].nil? then path.time = params[:time] end
         if not params[:latitudes].nil? then path.latitudes = params[:latitudes] end
         if not params[:longitudes].nil? then path.longitudes = params[:longitudes] end

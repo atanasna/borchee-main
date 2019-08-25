@@ -34,5 +34,12 @@ Rails.application.routes.draw do
     get 'paths/:id', to: 'paths#show'
     post 'paths/:id', to: 'paths#update'
     delete 'paths/:id', to: 'paths#destroy'
+
+    #Areas
+    get 'areas', to: 'areas#index'
+    post 'areas', to: 'areas#create'
+    get 'areas/:id', to: 'areas#show'
+    post 'areas/:id', to: 'areas#update'
+    delete 'areas/:id', to: 'areas#destroy'
 end
 

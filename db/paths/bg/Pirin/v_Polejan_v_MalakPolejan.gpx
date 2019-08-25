@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" creator="Maps 3D" version="1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+	<trk>
+<name>в.Полежан-в.Малък полежан</name>
+<extensions>
+<Maps3D:TrackExtensions xmlns:Maps3D="http://www.movingworld.de/xmlschemas/GpxExtensions/v1">
+<Maps3D:RealSpeed>0.889833</Maps3D:RealSpeed>
+<Maps3D:RealSecondsSpent>2349</Maps3D:RealSecondsSpent>
+</Maps3D:TrackExtensions>
+</extensions>
+<trkseg>
+<trkpt lat="41.725268" lon="23.495428">
+   <ele>2872.595459</ele>
+   <time>2018-08-09T09:35:18Z</time>
+</trkpt>
+<trkpt lat="41.725362" lon="23.495297">
+   <ele>2850.796387</ele>
+   <time>2018-08-09T09:36:52Z</time>
+</trkpt>
+<trkpt lat="41.725399" lon="23.495116">
+   <ele>2843.780518</ele>
+   <time>2018-08-09T09:38:23Z</time>
+</trkpt>
+<trkpt lat="41.725420" lon="23.494934">
+   <ele>2839.632568</ele>
+   <time>2018-08-09T09:39:07Z</time>
+</trkpt>
+<trkpt lat="41.725445" lon="23.494751">
+   <ele>2834.415527</ele>
+   <time>2018-08-09T09:39:33Z</time>
+</trkpt>
+<trkpt lat="41.725493" lon="23.494579">
+   <ele>2832.133789</ele>
+   <time>2018-08-09T09:39:59Z</time>
+</trkpt>
+<trkpt lat="41.725512" lon="23.494398">
+   <ele>2829.564453</ele>
+   <time>2018-08-09T09:40:34Z</time>
+</trkpt>
+<trkpt lat="41.725535" lon="23.494218">
+   <ele>2825.339111</ele>
+   <time>2018-08-09T09:41:30Z</time>
+</trkpt>
+<trkpt lat="41.725527" lon="23.494031">
+   <ele>2822.495117</ele>
+   <time>2018-08-09T09:42:18Z</time>
+</trkpt>
+<trkpt lat="41.725490" lon="23.493854">
+   <ele>2820.287354</ele>
+   <time>2018-08-09T09:43:23Z</time>
+</trkpt>
+<trkpt lat="41.725456" lon="23.493679">
+   <ele>2817.208740</ele>
+   <time>2018-08-09T09:43:51Z</time>
+</trkpt>
+<trkpt lat="41.725424" lon="23.493501">
+   <ele>2811.969727</ele>
+   <time>2018-08-09T09:44:55Z</time>
+</trkpt>
+<trkpt lat="41.725392" lon="23.493322">
+   <ele>2805.211914</ele>
+   <time>2018-08-09T09:46:29Z</time>
+</trkpt>
+<trkpt lat="41.725353" lon="23.493148">
+   <ele>2801.686523</ele>
+   <time>2018-08-09T09:47:29Z</time>
+</trkpt>
+<trkpt lat="41.725262" lon="23.493006">
+   <ele>2797.000488</ele>
+   <time>2018-08-09T09:48:13Z</time>
+</trkpt>
+<trkpt lat="41.725209" lon="23.492833">
+   <ele>2792.542969</ele>
+   <time>2018-08-09T09:49:10Z</time>
+</trkpt>
+<trkpt lat="41.725162" lon="23.492663">
+   <ele>2788.558594</ele>
+   <time>2018-08-09T09:49:50Z</time>
+</trkpt>
+<trkpt lat="41.725100" lon="23.492503">
+   <ele>2783.513916</ele>
+   <time>2018-08-09T09:50:56Z</time>
+</trkpt>
+<trkpt lat="41.724992" lon="23.492393">
+   <ele>2776.547852</ele>
+   <time>2018-08-09T09:52:44Z</time>
+</trkpt>
+<trkpt lat="41.724919" lon="23.492231">
+   <ele>2766.812500</ele>
+   <time>2018-08-09T09:53:53Z</time>
+</trkpt>
+<trkpt lat="41.724798" lon="23.492151">
+   <ele>2760.704346</ele>
+   <time>2018-08-09T09:54:30Z</time>
+</trkpt>
+<trkpt lat="41.724670" lon="23.492087">
+   <ele>2758.809570</ele>
+   <time>2018-08-09T10:03:25Z</time>
+</trkpt>
+<trkpt lat="41.724553" lon="23.491993">
+   <ele>2758.870605</ele>
+   <time>2018-08-09T10:03:47Z</time>
+</trkpt>
+<trkpt lat="41.724417" lon="23.491967">
+   <ele>2763.168701</ele>
+   <time>2018-08-09T10:04:29Z</time>
+</trkpt>
+<trkpt lat="41.724291" lon="23.491903">
+   <ele>2766.770752</ele>
+   <time>2018-08-09T10:05:03Z</time>
+</trkpt>
+<trkpt lat="41.724160" lon="23.491839">
+   <ele>2771.639648</ele>
+   <time>2018-08-09T10:05:51Z</time>
+</trkpt>
+<trkpt lat="41.724040" lon="23.491754">
+   <ele>2776.068359</ele>
+   <time>2018-08-09T10:06:29Z</time>
+</trkpt>
+<trkpt lat="41.723917" lon="23.491669">
+   <ele>2779.160889</ele>
+   <time>2018-08-09T10:06:53Z</time>
+</trkpt>
+<trkpt lat="41.723872" lon="23.491498">
+   <ele>2783.696289</ele>
+   <time>2018-08-09T10:08:55Z</time>
+</trkpt>
+<trkpt lat="41.723786" lon="23.491353">
+   <ele>2785.950439</ele>
+   <time>2018-08-09T10:09:36Z</time>
+</trkpt>
+<trkpt lat="41.723730" lon="23.491184">
+   <ele>2789.200439</ele>
+   <time>2018-08-09T10:09:57Z</time>
+</trkpt>
+<trkpt lat="41.723691" lon="23.491004">
+   <ele>2793.762207</ele>
+   <time>2018-08-09T10:10:36Z</time>
+</trkpt>
+<trkpt lat="41.723648" lon="23.490827">
+   <ele>2797.764160</ele>
+   <time>2018-08-09T10:11:23Z</time>
+</trkpt>
+<trkpt lat="41.723614" lon="23.490644">
+   <ele>2798.294922</ele>
+   <time>2018-08-09T10:11:50Z</time>
+</trkpt>
+<trkpt lat="41.723551" lon="23.490484">
+   <ele>2798.424316</ele>
+   <time>2018-08-09T10:12:07Z</time>
+</trkpt>
+<trkpt lat="41.723464" lon="23.490340">
+   <ele>2805.365723</ele>
+   <time>2018-08-09T10:13:05Z</time>
+</trkpt>
+<trkpt lat="41.723379" lon="23.490194">
+   <ele>2809.129639</ele>
+   <time>2018-08-09T10:13:34Z</time>
+</trkpt>
+<trkpt lat="41.723314" lon="23.490036">
+   <ele>2810.035156</ele>
+   <time>2018-08-09T10:14:07Z</time>
+</trkpt>
+<trkpt lat="41.723234" lon="23.489884">
+   <ele>2813.580322</ele>
+   <time>2018-08-09T10:14:28Z</time>
+</trkpt>
+</trkseg></trk></gpx>
