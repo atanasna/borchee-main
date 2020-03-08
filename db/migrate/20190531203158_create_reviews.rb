@@ -7,7 +7,7 @@ class CreateReviews < ActiveRecord::Migration[5.2]
         t.string :reviewable_type
 
         t.boolean :deleted, :default => false
-        t.timestamp
+        t.timestamps
     end
 
     add_index :reviews, :reviewable_id
