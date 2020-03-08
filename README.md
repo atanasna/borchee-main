@@ -9,8 +9,8 @@ Prepare the Database:
 
     sudo apt-get install mysql-server
     sudo apt install libmysqlclient-dev
-    mysql -u root -p
-    CREATE USER 'money'@'localhost' IDENTIFIED BY 'chicksForFree';
+    sudo mysql
+    CREATE USER 'borche'@'localhost' IDENTIFIED BY 'borchepass';
 
 Install ruby environment:
 
@@ -26,7 +26,7 @@ Install ruby environment:
     gem install rails -v 6.0.2
 
 Start:
-    
+
     bundler install
     rake db:create
     rake db:migrate
