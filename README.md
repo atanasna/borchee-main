@@ -10,7 +10,8 @@ Prepare the Database:
     sudo apt-get install mysql-server
     sudo apt install libmysqlclient-dev
     sudo mysql
-    CREATE USER 'borche'@'localhost' IDENTIFIED BY 'borchepass';
+    CREATE USER 'borchee'@'localhost' IDENTIFIED BY 'borcheepass';
+    GRANT ALL PRIVILEGES ON *.* TO 'borchee'@'localhost';
 
 Install ruby environment:
 
