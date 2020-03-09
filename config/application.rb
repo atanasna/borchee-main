@@ -20,9 +20,14 @@ Bundler.require(*Rails.groups)
 module Borche
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
-    config.load_defaults 5.2
+    config.load_defaults 6.0
+
+    #Allows multiple attachements for blob and active_storage 
     config.active_storage.replace_on_assign_to_many = true
-    
+
+    #allows requests with api.borchee,com in the header of the HTML request
+    config.hosts << "api.borchee.com"
+
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration can go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded after loading
