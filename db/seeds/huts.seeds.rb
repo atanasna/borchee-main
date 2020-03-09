@@ -14,6 +14,7 @@ def seedHuts
     huts.push (Hut.new :name => "Malina", :latitude => 41.614677, :longitude => 23.538053, :approved => true, :altitude => 1569, :capacity => 60)
     huts.push (Hut.new :name => "Koncheto", :latitude => 41.78746, :longitude => 23.38246, :approved => true, :altitude => 2760, :capacity => 10)
     huts.push (Hut.new :name => "Pirin", :latitude => 41.631786, :longitude => 23.497795, :approved => true, :altitude => 1620, :capacity => 80)
+
     huts.push (Hut.new :name => "Predel", :latitude => 41.896867, :longitude => 23.317046, :approved => true, :altitude => 1050, :capacity => 30)
     huts.push (Hut.new :name => "Popovi Livadi", :latitude => 41.553544, :longitude => 23.634004, :approved => true, :altitude => 1412, :capacity => 50)
     huts.push (Hut.new :name => "Spalnia GoceDelchev", :latitude => 41.569965, :longitude => 23.729068, :approved => true, :altitude => 730, :capacity => 40)
@@ -184,26 +185,21 @@ def seedHuts
     huts.push (Hut.new :name => "Voden_Kamak", :latitude => 42.464505, :longitude => 24.755924, :approved => true, :altitude => 0, :capacity => 70)
     huts.push (Hut.new :name => "Zagaza", :latitude => 41.767807, :longitude => 23.324059, :approved => true, :altitude => 1400, :capacity => 50)
     huts.push (Hut.new :name => "Partizanska Pesen", :latitude => 42.784264, :longitude => 25.197934, :approved => true, :altitude => nil, :capacity => nil)
+ 
     huts.push (Hut.new :name => "Mandrata", :latitude => 42.75034, :longitude => 25.00495, :approved => true, :altitude => nil, :capacity => 22)
-    huts.push (Hut.new :name => "Rai", :latitude => 42.696373, :longitude => 24.93111, :approved => true, :altitude => 1430, :capacity => 120, :description => '<p>It is located on the southern slopes of the mountain\'s highest peak - Botev, in an area that is famous for its beauty. The hut is built on a small green terrace bathed in sunlight and fenced by a dense forest of old beech trees down from the south. Above the hut the hillside climbs steeply up until it reaches an immense wall of vertical grey rocks - a giant threshold of some mythical house hidden in the clouds above. The waters of the melting snows fall down from these high cliffs forming a beautiful waterfall. Its name is Raiskoto praskalo.</p>'\
-    '<p>If you want to visit this heavenly place (for that is what the hut\'s name means - in Bulgarian \'rai\' is heaven) you first need to get to Kalofer - a small town located 160 km east of Sofia. It is built on the banks of the river Tundzha, hidden between the hills of a ridge that stretches to the south of the Botev Peak. You can reached it by train, by bus or by car depending on what your budget is and how much time you have to spare. The trains are the cheapest though also the slowest option. A ride from the capital usually takes around 3 hours and then you have to take the minibus that transfers the passengers from the train station to the centre of Kalofer. Whenever there are enough tourists to pay for it, the minibus may also go to the locality of Panitsite (6 km north of the town) where the tourist path to hut \'Rai\' starts.</p>' \
-    '<p>The route begins with a steep climb up the short shoulder of a hill that is covered with trees. In less than 20 minutes you will get to its crest where you will see the entrance of the Central Balkan National Park. From there on the path follows a dirt road that gently gathers high through a thin forest before it gets to an open area. If the day happens to be a clear one, there is a beautiful panoramic view towards the southern slopes of Botev and the peaks west and east of it. Continue norht-northwest by following the road and the blue markings. At the north end of the open space the road turns again into a narrower trail which soon dives into a shadowy forest. After walking for about an hour or so you will get to a small bridge. There begins the last and also the most difficult part of our route. The trail starts to zig-zag up a steep slope and for those who happen to get out of breath this section may turn out to be somewhat daunting. Do not despair but pace yourself and rest often. The hut isn\'t far away. Once you get out of the forest, you will reach a saddle that lies between peak Malak Raiski Kupen and the rock wall to the right. Your goal is few hundred metres down the other side of the ridge.</p>' \
-    '<p>The hut \'Rai\' was built in 1935. It works year round with July and August being the busiest time of the year. There are 113 places (80 separate beds and 33 bunkbed places). The dining room is at the first floor and there you can buy drinks and food though you may find the choice somewhat limited if you visit the place in low season.</p>' )
-
+    huts.push (Hut.new :name => "Rai", :latitude => 42.696373, :longitude => 24.93111, :approved => true, :altitude => 1430, :capacity => 120, :description => "asd")
 
     huts.each_with_index do |hut,i|
-        puts i.to_s + " ------------------------------"
         Dir["db/pictures/hut/#{hut.name}/*"].each do |file|
             if file.match(/\.(jpg|png|bmp)/)
                 extension = file.match(/\.(jpg|png|bmp)/i).captures[0]
                 if hut.images
-                hut.images.attach(
-                    io: File.open("#{file}"), 
-                    filename: "#{hut.name}_#{(1000+rand(8999))}.#{extension}", 
-                    content_type: "image/#{extension}")
+                    hut.images.attach(
+                        io: File.open("#{file}"), 
+                        filename: "#{hut.name}_#{(1000+rand(8999))}.#{extension}", 
+                        content_type: "image/#{extension}")
+                end
             end
-            ap "--------------------------------------------------"
-            ap file
         end
         hut.images.attach(io: File.open('db/pictures/hut/default/hut1.png'), filename: "hut1_#{(1000+rand(8999))}.jpg", content_type: 'image/png')
         hut.images.attach(io: File.open('db/pictures/hut/default/hut2.png'), filename: "hut2_#{(1000+rand(8999))}.jpg", content_type: 'image/png')
