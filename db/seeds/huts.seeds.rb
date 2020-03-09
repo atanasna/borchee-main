@@ -201,6 +201,7 @@ def seedHuts
                     filename: "#{hut.name}_#{(1000+rand(8999))}.#{extension}", 
                     content_type: "image/#{extension}")
             end
+            ap file
         end
         #hut.images.attach(io: File.open('db/pictures/hut/default/hut1.png'), filename: "hut1_#{(1000+rand(8999))}.jpg", content_type: 'image/png')
         #hut.images.attach(io: File.open('db/pictures/hut/default/hut2.png'), filename: "hut2_#{(1000+rand(8999))}.jpg", content_type: 'image/png')
