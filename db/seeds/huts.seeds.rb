@@ -196,28 +196,19 @@ def seedHuts
         Dir["db/pictures/hut/#{hut.name}/*"].each do |file|
             if file.match(/\.(jpg|png|bmp)/)
                 extension = file.match(/\.(jpg|png|bmp)/i).captures[0]
+                if hut.images
                 hut.images.attach(
                     io: File.open("#{file}"), 
                     filename: "#{hut.name}_#{(1000+rand(8999))}.#{extension}", 
                     content_type: "image/#{extension}")
             end
+            ap "--------------------------------------------------"
             ap file
         end
-        #hut.images.attach(io: File.open('db/pictures/hut/default/hut1.png'), filename: "hut1_#{(1000+rand(8999))}.jpg", content_type: 'image/png')
-        #hut.images.attach(io: File.open('db/pictures/hut/default/hut2.png'), filename: "hut2_#{(1000+rand(8999))}.jpg", content_type: 'image/png')
-        #hut.images.attach(io: File.open('db/pictures/hut/default/hut3.png'), filename: "hut3_#{(1000+rand(8999))}.jpg", content_type: 'image/png')
-        
-        ap "--------------------------------------------------"
-        ap hut
-        ap "--------------------------------------------------"
-        ap hut.inspect
-        ap "--------------------------------------------------"
-        ap hut.images
-        ap "--------------------------------------------------"
-        hut.valid?
-        ap "--------------------------------------------------"
-        hut.errors.messages
-        ap "--------------------------------------------------"
+        hut.images.attach(io: File.open('db/pictures/hut/default/hut1.png'), filename: "hut1_#{(1000+rand(8999))}.jpg", content_type: 'image/png')
+        hut.images.attach(io: File.open('db/pictures/hut/default/hut2.png'), filename: "hut2_#{(1000+rand(8999))}.jpg", content_type: 'image/png')
+        hut.images.attach(io: File.open('db/pictures/hut/default/hut3.png'), filename: "hut3_#{(1000+rand(8999))}.jpg", content_type: 'image/png')
+
         hut.save
     end
 
