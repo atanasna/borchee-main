@@ -191,7 +191,8 @@ def seedHuts
     '<p>The hut \'Rai\' was built in 1935. It works year round with July and August being the busiest time of the year. There are 113 places (80 separate beds and 33 bunkbed places). The dining room is at the first floor and there you can buy drinks and food though you may find the choice somewhat limited if you visit the place in low season.</p>' )
 
 
-    huts.each do |hut|
+    huts.each_with_index do |hut,i|
+        puts i + " ------------------------------"
         Dir["db/pictures/hut/#{hut.name}/*"].each do |file|
             if file.match(/\.(jpg|png|bmp)/)
                 extension = file.match(/\.(jpg|png|bmp)/i).captures[0]
