@@ -192,7 +192,7 @@ def seedHuts
 
 
     huts.each_with_index do |hut,i|
-        puts i + " ------------------------------"
+        puts i.to_s + " ------------------------------"
         Dir["db/pictures/hut/#{hut.name}/*"].each do |file|
             if file.match(/\.(jpg|png|bmp)/)
                 extension = file.match(/\.(jpg|png|bmp)/i).captures[0]
