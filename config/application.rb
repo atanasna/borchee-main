@@ -16,7 +16,6 @@ require "rails/test_unit/railtie"
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
-Rails.application.config.active_storage.replace_on_assign_to_many = true
 
 module Borche
   class Application < Rails::Application
