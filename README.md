@@ -24,7 +24,6 @@ Install ruby environment:
     rbenv install 2.7.0
     rbenv global 2.7.0
     gem install bundler
-    gem install rails -v 6.0.2
 
 Start:
 
@@ -32,4 +31,4 @@ Start:
     rake db:create
     rake db:migrate
     rake db:seed
-    rails s
+    sudo env "PATH=$PATH" rails s -b 0.0.0.0 -p 80
